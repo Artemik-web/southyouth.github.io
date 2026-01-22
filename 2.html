@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+.box1{
+border: 5px solid rgb(239, 10, 10);
+width: 400px;
+height: 6000px;
+}
+.box2{
+    border-radius: 50%;
+background-color: red;
+width: 30px;
+height: 30px;
+position: relative;
+left: 80px;
+top: -80px;
+padding: 10px;
+}
+
+.box3  {
+border-radius:10% ;
+width: 80px;
+height: 40px;
+position: fixed;
+left: 300px;
+top: 280px;
+background: green;
+padding: 10px;
+}
+.box4 {display: none;
+    /* 隐藏 */
+border-radius:10% ;
+width: 100px;
+height: 80px;
+position: fixed;
+left: 290px;
+top: 180px;
+background: rgb(37, 37, 37);
+padding: 10px;
+/* 固定定位相对于整个页面 */
+}
+.box3:hover .box4 {
+    display: block;
+    /* 出现 */
+}
+
+</style>
+<body>
+    <div class="box1">
+    <button style="width: 90px; height: 70px; text-align: center;"> <b>评论</b></button>
+    <div class="box2" style="text-align: center;">99+</div>
+    <div class="box3" ><span>在线客服</span><div class="box4" ></div></div>
+
+    </div>
+</body>
+</html>
+
+
+
+

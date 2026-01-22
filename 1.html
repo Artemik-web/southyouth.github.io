@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.box1{
+border: 5px solid rgb(239, 10, 10);
+width: 500px;
+height: 5000px;
+position: absolute;
+/* 绝对定位 */
+top: 50px;
+z-index: 1;
+}
+.box2{
+border: 5px solid rgb(21, 219, 222);
+width: 100px;
+height: 100px;
+position: relative;
+left: 50px;
+/* 相对定位 */
+}
+.box3{
+border: 5px solid rgb(228, 232, 8);
+width: 50px;
+height: 50px;
+position: fixed;
+left: 600px;
+}
+/* 固定定位，会跟着滚轮走 */
+</style>
+
+<body>
+ <div class="box1">
+ <div class="box2">2222222222</div>   
+ <div class="box3"333333333333></div>   
+ </div>   
+</body>
+</html>

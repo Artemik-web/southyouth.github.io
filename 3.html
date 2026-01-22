@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .one:hover span::after {
+        content: "▶";
+    }
+
+    .one span::after {
+        content: "▼";
+    }
+
+    .box1 {
+        display: none;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+
+    .one:hover .box1 {
+        display: block;
+    }
+
+    .two:hover span::after {
+        content: "▶";
+    }
+
+    .two span::after {
+        content: "▼";
+    }
+
+    .box2 {
+        display: none;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(56, 19, 221);
+    }
+
+    .two:hover .box2 {
+        display: block;
+    }
+
+    .two {
+        float: left;
+    }
+
+    .one {
+        float: left;
+    }
+</style>
+<div class="one"><span></span> 选择分别
+    <div class="box1">
+        <div>北京市</div>
+        <div>南昌市</div>
+        <div>上海市</div>
+    </div>
+</div>
+<div class="two"><span></span>学习
+    <div class="box2">
+        <div>本科</div>
+        <div>专科</div>
+        <div>研究生</div>
+    </div>
+</div>
+
+<body>
+
+
+
+
+
+</body>
+
+</html>
