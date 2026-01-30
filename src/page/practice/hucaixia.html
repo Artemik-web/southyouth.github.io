@@ -130,18 +130,19 @@
         height: 600px;
         background-color: white;
     }
-
+   
+.boxa1 img{height: 600px;}
     .boxa2 {
         height: 400px;
         background-color: white;
         margin-left: 20px;
+        width: 875px;
     }
-
     .boxa3 {
         width: 100px;
         height: 40px;
         background-color: rgb(15, 14, 14);
-        margin-left: 1000px;
+        margin-left: 870px;
     }
 
     .boxa3:hover {
@@ -153,7 +154,7 @@
         width: 100px;
         height: 40px;
         background-color: rgb(15, 14, 14);
-        margin-left: 1100px;
+        margin-left: 970px;
         color: white;
         text-align: center;
         line-height: 40px;
@@ -169,50 +170,195 @@
         height: 400px;
         background-color: white;
         display: flex;
+        
 
     }
 
     .boxa5 {
-        height: 400px;
+        height: 240px;
         background-color: white;
- flex: 1;
+        flex: 1;
+        position: relative;
+        overflow: hidden;
     }
-
+.boxa5 img{
+    width: 400px;transition:0.3s ease;
+}
+.text1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   transform: translate(-50%, -50%)scale(1);
+color: white;
+font-size: 18px;
+   font-weight: bold;
+   align-items: center;
+   justify-content: center;
+   opacity: 0;
+   transition: opacity 0.3s ease, transform 0.3s ease;
+   transform:translate(-50%,-50%)scale(1.5);
+   transition: all 0.3s ease cubic-bezier(0.175,0.885,0.42,0.131);
+   padding: 20px;
+   border: 4px solid white;
+   z-index: 10;
+   display: inline-block;
+   min-width: 120px;
+   text-align: center;
+}
+.boxa5:hover .text1{
+    opacity: 1;
+    transform: translate(-50%, -50%)scale(1.1);
+}
+.boxa5:hover img{
+    filter:brightness(0.6)
+}
     .boxa6 {
         margin-left: 50px;
-        height: 400px;
+        height: 240px;
         background-color: white;
         float: right;
- flex: 1;
-    }
+        flex: 1;
+         position: relative;
+        overflow: hidden;
 
+    }
+.boxa6 img{
+    width: 400px;transition:0.3s ease;
+}
     .boxz {
         width: 100%;
-        height: 800px;
-        background-color:white;
-    display: flex   ;
+        height: 700px;
+        background-color: white;
+        display: flex;
 
-    gap: 20px;
+        gap: 20px;
     }
-    .boxz1{
+.text2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   transform: translate(-50%, -50%)scale(1);
+color: white;
+font-size: 18px;
+   font-weight: bold;
+   align-items: center;
+   justify-content: center;
+   opacity: 0;
+   transition: opacity 0.3s ease, transform 0.3s ease;
+   transform:translate(-50%,-50%)scale(1.5);
+   transition: all 0.3s ease cubic-bezier(0.175,0.885,0.42,0.131);
+   padding: 20px;
+   border: 4px solid white;
+   z-index: 10;
+   display: inline-block;
+   min-width: 120px;
+   text-align: center;
+}
+.boxa6:hover .text2{
+    opacity: 1;
+    transform: translate(-50%, -50%)scale(1.1);
+}
+.boxa6:hover img{
+    filter:brightness(0.6)
+}
+
+    .boxz1 {
         width: 400px;
-        height:500px;
+        height: 600px;
         background-color: aliceblue;
         margin-top: 50px;
-         flex: 1;
+        flex: 1;
     }
-    .boxz2{
+
+    .boxz1 img {
+        width: 100%;
+        transition: transform 2s ease;
+    }
+
+    .boxz1:hover img {
+        transform: scale(1.03);
+        opacity: 0.9;
+    }
+
+    .boxz2 {
         width: 400px;
-        height:500px;
+        height: 600px;
         background-color: aliceblue;
         margin-top: 50px;
-         flex: 1;
+        flex: 1;
     }
-     .boxz3{
+
+    .boxz2 img {
+        width: 100%;
+        transition: transform 2s ease;
+    }
+
+    .boxz2:hover img {
+        transform: scale(1.03);
+        opacity: 0.9;
+    }
+
+    .boxz3 {
         width: 400px;
-        height:550px;
+        height: 650px;
         background-color: aliceblue;
-       flex: 1;
+        flex: 1;
+    }
+
+    .boxz3 img {
+        width: 100%;
+        transition: transform 2s ease;
+    }
+
+    .boxz3:hover img {
+        transform: scale(1.03);
+        opacity: 0.9;
+    }
+
+    .boxs {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        background-color: white;
+        justify-content: space-around;
+        border-top: 1px solid #ccc;
+    }
+
+    .boxs1 {
+        width: 100px;
+        height: 300px;
+        background-color: white;
+        color: black
+
+    }
+
+    .boxs2 {
+        width: 100px;
+        height: 300px;
+        background-color: white;
+        color: black
+    }
+
+    .boxs3 {
+        width: 100px;
+        height: 300px;
+        background-color: white;
+        color: black
+    }
+
+    .boxs4 {
+        width: 100px;
+        height: 300px;
+        background-color: white;
+        color: black;
+        border-right: 1px dashed #ccc;
+    }
+
+    .boxs5 {
+        width: 400px;
+        height: 300px;
+        background-color: white;
+        color: black
     }
 </style>
 
@@ -262,10 +408,12 @@
             <div class="boxb">
                 <div class="boxa5">
                     <img src="./img/box-p1.jpg" alt="">
+                    <div class="text1">FEIZI</div>
                 </div>
 
                 <div class="boxa6">
                     <img src="./img/box-p2.jpg" alt="">
+                    <div class="text2">LANAFAY</div>
                 </div>
 
 
@@ -275,18 +423,67 @@
     </div>
     <div class="boxz">
         <div class="boxz1">
-            <img  src="./img/house.jpg" alt="" width="432px">
+            <img src="./img/house.jpg" alt="">
             <h3>发展历程</h3>
-            <p></p>
+            <h3>>
+                菲姿集团秉承文化与时尚并存，庄重与简约并进，
+                品质 责任 构建追求卓越敢为人先的企业
+                饰文化与生活方式。集团公司坚持品质是根本，服务是关键，原积薄发快速发展，历经市场的考验，不断谱写更加辉煌的篇章。</h3>
+            <br>
+            <br>
+            <div> <a style="margin-left: 380px;" href="">查看更多►</a></div>
         </div>
         <div class="boxz2">
-            <img  src="./img/runner.jpg" alt="" width="432px">
+            <img src="./img/runner.jpg" alt="">
             <h3>企业文化</h3>
+            <h3>>品质 责任 构建追求卓越敢为人先的企业终旨;合作 尊重营造共赢共享共创的永续经营</h3>
+            <br>
+            <br>
+            <br><br>
+            <div><a style="margin-left: 380px;" href="">查看更多►</a></div>
         </div>
         <div class="boxz3">
-            <img  src="./img/brand.jpg" alt="" width="432px">
-            <h3></h3>
+            <img src="./img/brand.jpg" alt="">
+            <h3>菲姿2018年度表彰暨"不忘初心，共筑梦想|20."忘初心，共筑梦想，2019我们都是追梦人"上海菲姿有限公司年度晚会于2019年3月29日在［2019]
+            </h3>
+            <div> <a style="margin-left: 380px;" href="">查看更多►</a></div>
         </div>
+    </div>
+    <div>
+        <div class="boxs">
+            <div class="boxs1">
+                <h3>关于集团</h3>
+                <div><a style="color: rgb(174, 172, 172);" href="">集团简介</a></div>
+                <div><a style="color: rgb(174, 172, 172);" href="">发展历程</a></div>
+                <div><a style="color: rgb(174, 172, 172);" href="">企业文化</a></div>
+            </div>
+            <div class="boxs2">
+                <h3>集团资讯</h3>
+            </div>
+            <div class="boxs3">
+                <h3>旗下品牌</h3>
+                <div><a style="color: rgb(174, 172, 172);" href="菲姿FEIZI">菲姿FEIZI</a></div>
+                <div><a style="color: rgb(174, 172, 172);" href="啦娜菲LANAFAY">啦娜菲LANAFAY</a></div>
+            </div>
+            <div class="boxs4">
+                <h3>人才资讯</h3>
+                <div><a style="color: rgb(174, 172, 172);" href="">人才政策</a></div>
+                <div><a style="color: rgb(174, 172, 172);" href="">工作机会</a></div>
+
+            </div>
+            <div class="boxs5">
+                <h3>联系我们</h3>
+                <div><a style="color: rgb(174, 172, 172);" href="">TEL : 021-67626666</a></div>
+                <div><a style="color: rgb(174, 172, 172);" href="">E-MAL :HR@feizi.com</a></div>
+                <div><a style="color: rgb(174, 172, 172);" href="">FAX :021-67627878</a></div>
+                <div><a style="color: rgb(174, 172, 172);" href="">总部 ：上海市松江区九亭镇久富开发区盛龙路1号</a></div>
+            </div>
+
+
+
+        </div>
+
+
     </div>
 </body>
 
