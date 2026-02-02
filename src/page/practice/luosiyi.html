@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f8f7f7;
+        }
+        .logo {
+            font-size: 50px;
+            font-weight: bold;
+            color: #333;
+        }
+        .box1 {
+            display: flex;
+            list-style: none;
+        }
+        .box2 {
+            position: relative;
+            margin-left: 40px;
+        }
+        .box2 > a {
+            color: #333;
+            font-size: 20px;
+            padding: 8px 0;
+            display: block;
+        }
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: grey;
+            list-style: none;
+            min-width: 120px;
+            display: none; 
+        }
+        .dropdown li {
+            padding: 10px 20px;
+        }
+        .dropdown li a {
+            color: #666;
+            font-size: 14px;
+            display: block;
+        }
+        .box2:hover .dropdown {
+            display: block;
+        }
+        .dropdown li:hover {
+            background: #f4f3f3;
+        }
+         .box3 {
+            width: 100%;
+            min-width: 300px;
+        }
+        .box3 img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .box4{
+            background-color: rgb(255, 255, 255);
+            max-width: 100%;
+            margin: 50px auto;
+            padding: 0 20px;
+            display: flex;
+        }
+        .box5{
+            width: 1100px;
+            height: 500px;
+            margin-left: 65px;
+        }
+        .box6{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            left: 100px;
+            margin-top: 40px;
+            margin-left: 550px;
+        }
+        .box7 {
+            width: 100px;
+            height: 35px;
+            top: 50px;
+            left: 1100px;
+            background-color: rgb(66, 66, 66);
+    }
+        .box7:hover img {
+            font-size: 12px 0;
+            background-color: rgb(175, 174, 174);
+
+    }
+        .box8 {
+            width: 100px;
+            height: 35px;
+            top: 400px;
+            left: 1200px;
+            background-color: rgb(64, 64, 63);
+            color: aliceblue;
+    }
+         .box8:hover {
+            color: aliceblue;
+            background: rgb(160, 160, 161);
+    }
+        .box9{
+            display: flex;
+            margin: 20px 0;
+            margin-top: -230px;
+    }
+        .box10 img{
+            width: 400px;
+            height: 275px;
+    }
+        .box10:hover  {
+            color: aliceblue;
+            background: rgb(160, 160, 161);
+            width: 400px;
+            height: 275px;
+    }
+        .box11 img{
+            width: 400px;
+            height: 275px;
+            margin-left: 50px;
+    }
+        .box11:hover  {
+            color: aliceblue;
+            background: rgb(160, 160, 161);
+            border-radius: 0px;
+            width: 400px;
+            height: 275px;
+    }
+        .box12 {
+            width: 31%;
+            overflow: hidden;
+        }
+        .box12 img {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+        .box12 img:hover {
+            transform: scale(1.05); 
+        }
+        .box13 {
+            background-color: #f0f0f0; 
+            padding: 15px 20px;
+            color: #333;
+        }
+        .box13 h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .box13 p{
+            line-height: 1.5;
+            color: #666;
+        }
+        .box14 {
+            display: block;
+            text-align: right;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+         .box15 {
+            width: 33.3%;
+            height: 600px;
+            overflow: hidden;
+            margin-left: 450px;
+            margin-top: -475px;
+        }
+        .box15 img {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+        .box15 img:hover {
+            transform: scale(1.05); 
+        }
+        .box16 {
+            background-color: #f0f0f0; 
+            padding: 15px 20px;
+            color: #333;
+            height: 100px;
+        }
+        .box16 h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .box16 p{
+            line-height: 1.5;
+            color: #666;
+        }
+        .box17 {
+            display: block;
+            text-align: right;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 100px;
+        }
+        .box18 {
+            width: 31.3%;
+            height: 650px;
+            overflow: hidden;
+            margin-left: 900px;
+            margin-top: -640px;
+        }
+        .box18 img {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+        .box18 img:hover {
+            transform: scale(1.05); 
+        }
+        .box19 {
+            background-color: #f0f0f0; 
+            padding: 10px 20px;
+            color: #333;
+            height: 100px;
+        }
+        .box19 h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .box19 p{
+            line-height: 1.5;
+            color: #666;
+        }
+        .box20 {
+            display: block;
+            text-align: right;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 100px;
+        } 
+         .box21 {
+            background-color: #ffffff;
+            padding: 40px 0;
+            border-top: 1px solid #e5e5e5;
+        }
+        .box22 {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            border-top: 1px solid #e5e5e5;
+        }
+        .box23 {
+            display: flex;
+            width: 70%;
+            justify-content: space-around;
+        }
+        .box24 {
+            text-align: left;
+        }
+        .box24 h4 {
+            font-size: 16px;
+            color: #333333;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .box24 p {
+            font-size: 14px;
+            color: #666666;
+            line-height: 1.8;
+            margin: 4px 0;
+        }
+        .box25 {
+            width: 30%;
+            border-left: 1px solid #e5e5e5;
+            padding-left: 40px;
+        }
+        .box26 {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e5e5;
+            color: #999999;
+            font-size: 12px;
+        }   
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="logo">菲姿时尚集团</div>
+        <ul class="box1">
+            <li class="box2">
+                <a href=" ">关于集团</a>
+                <ul class="dropdown">
+                    <li><a href="#">集团简介</a></li>
+                    <li><a href="#">发展历程</a></li>
+                    <li><a href="#">企业文化</a></li>
+                </ul>
+            </li>
+            <li class="box2"><a href="#">集团资讯</a></li>
+            <li class="box2">
+                <a href=" ">旗下品牌</a >
+                <ul class="dropdown">
+                    <li><a href="#">菲姿FEIZI</a></li>
+                    <li><a href="#">啦娜菲LANAFAY</a></li>
+                </ul>
+            </li>
+           <li class="box2">
+                <a href=" ">人才发展</a >
+                <ul class="dropdown">
+                    <li><a href="#">人才政策</a></li>
+                    <li><a href="#">工作机会</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <br>
+       <div class="box3">
+            <img src="./img/brush2.jpg"  alt="">
+       </div>
+       <div class="box4"> 
+            <div><img src="./img/aside-view.jpg" alt=""></div>
+             <div class="box5">
+                <h2>集团介绍</h2>
+                <br>
+                <p>创立于1992年的菲姿时尚集团是集研发、生产、品牌管理、服务于一体的大型现代化品牌企业。
+                28年来集团始终坚持国际化的品牌经营理念,
+                现已发展成为一家多品牌、集团化运作的知名时尚品牌企业。
+                1999年集团总部落户上海,占地100多亩,坐拥近万平方现代时尚的办公环境。
+                具有深厚品牌文化理念,自主创新研发设计中心、现代化生产基地、仓储物流、高效运营服务体系融合
+                的时尚服装公司。集团目前拥有员工近3000名,菲姿时尚集团实施品牌战略，
+                可持续发展，创新发展之路，不断加大品牌建设力度，为努力实现“集团品牌化，
+                品牌集团化”奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。</p >
+               <div class="box6">
+                <button class="box7"></button>
+                <button class="box8">查看更多</button>
+               </div>
+               <div class="box9">
+                <div class="box10">
+                    <img src="./img/box-p1.jpg" alt="">
+                </div>
+                <div class="box11"><img src="./img/box-p2.jpg" alt=""></div>
+               </div>
+            </div>
+        </div>
+        <div class="box12">
+            <div class="box13">
+            <img src="./img/house.jpg" alt="">
+            <br>
+            <H3>发展历程</H3>
+            <br>
+            <p>菲姿集团秉承文化与时尚并存，庄重与简约并进，传播围饰文化与生活方式。
+                集团公司坚持品质是根本，服务是键，厚积薄发快速发展，历经市场的考验，
+                不断谱写更力辉煌的篇章</p >
+            <a href=" " class="box14">查看更多</a>
+            </div>
+        </div>
+         <div class="box15">
+            <div class="box16">
+            <img src="./img/runner.jpg" alt="">
+            <br>
+            <H3>企业文化</H3>
+            <br>
+            <p>品质责任构建追求卓越敢为人先的企业宗旨；合作尊重营造共赢共享共创价值的永续经营</p >
+            <a href=" " class="box17">查看更多</a>
+            </div>
+        </div>
+        <div class="box18">
+            <div class="box19">
+            <img src="./img/brand.jpg" alt="">
+            <br>
+            <H3>集团咨询</H3>
+            <br>
+            <p>菲姿2018年度表影暨”不忘初心，共筑梦想|20…
+                “不忘初心，共筑梦想，2019我们都是追梦人”
+                上海菲姿服饰有限公司年度晚会
+                于2019年3月29日在.2019-04-19]</p>
+            <a href=" " class="box20">查看更多</a>
+            </div>
+        </div>
+    </div>
+    <br> 
+    </div>
+    <div class="box22">
+            <div class="box23">
+                <div class="box24">
+                    <h4>关于集团</h4>
+                    <p>集团简介</p>
+                    <p>发展历程</p>
+                    <p>企业文化</p>
+                </div>
+                <div class="box24">
+                    <h4>集团资讯</h4>
+                    <p>菲姿FEIZI</p >
+                    <p>啦娜菲LANAFAY</p>
+                </div>
+                <div class="box24">
+                    <h4>旗下品牌</h4>
+                    <p>菲姿FEIZI</p>
+                    <p>啦娜菲LANAFAY</p>
+                </div>
+                <div class="box24">
+                    <h4>人才发展</h4>
+                    <p>人才政策</p>
+                    <p>工作机会</p>
+                </div>
+            </div>
+            <div class="box25">
+                <h4>联系我们</h4>
+                <p>TEL: 021-67626666</p >
+                <p>E-MAIL: HR@feizi.com</p >
+                <p>FAX: 021-67627878</p >
+                <p>总部: 上海市松江区九亭久富开发区盛龙路1号</p>
+            </div>
+        </div>
+        <div class="box26">
+            <p>COPYRIGHT © 2016 FEIZI. ALL RIGHTS RESERVED.</p>
+        </div>
+    </body>
+</html>
