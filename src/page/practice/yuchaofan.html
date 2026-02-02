@@ -9,24 +9,28 @@
         * {
             margin: 0;
             padding: 0;
+            /* box-sizing: border-box; */
         }
+
+
+
         .head {
             width: 100%;
             /* height: 1200px; */
-            background-color: rgb(50, 42, 165);
+            /* background-color: rgb(50, 42, 165); */
             padding-top: 67px;
         }
 
         .head1 {
             width: 1520px;
-            background-color: chartreuse;
+            /* background-color: chartreuse; */
             margin: 0 auto;
         }
 
         .nav {
             height: 67px;
-            background-color: rgb(233, 14, 14);
-            position: fixed;
+            /* background-color: rgb(233, 14, 14); */
+            position: absolute;
             top: 0;
             z-index: 9999;
             left: 0;
@@ -85,8 +89,7 @@
             background-color: darkgray;
             display: none;
             padding: 10px 0;
-            /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
-            /* 增加阴影，提升层次感 */
+            opacity: 0.8;
         }
 
         .dropdown-item {
@@ -106,38 +109,44 @@
 
         .box {
             width: 100%;
-            height: 1000px;
-            background-color: burlywood;
+            /* height: 1000px; */
+            /* background-color: burlywood; */
             /* margin: 0 165px; */
             max-width: 1520px;
 
             margin: 0 auto;
             margin-top: 37px;
+            overflow: hidden
         }
 
         .box_left {
-            background-color: brown;
-            width:480px;
+            /* background-color: brown; */
+            width: 550px;
+            width: calc(100% - 920px);
+            /* height:750px ; */
             float: left;
 
         }
 
         .box_left img {
             width: 100%;
+            display: block;
 
         }
 
         .box_right {
-            background-color: aqua;
+            /* background-color: aqua; */
             float: right;
-            width: 1000px;
-            margin-top: 40px;
-            /* margin-right: 40px; */
+            width: 850px;
+            margin-top: 70px;
+            margin-right: 10px;
+
         }
 
         .box_right p {
             padding-top: 20px;
             padding-bottom: 20px;
+            line-height: 2.0;
 
         }
 
@@ -145,7 +154,8 @@
             width: 100px;
             height: 40px;
             background-color: rgb(15, 14, 14);
-            margin-left: 800px;
+            margin-left: 650px;
+            margin-top: 40px;
         }
 
         .box3:hover {
@@ -157,7 +167,7 @@
             width: 100px;
             height: 40px;
             background-color: rgb(15, 14, 14);
-            margin-left: 900px;
+            margin-left: 750px;
             color: white;
             text-align: center;
             line-height: 40px;
@@ -170,19 +180,174 @@
         }
 
         .box_left_xia {
-            background-color: rgb(74, 255, 2);
+            /* background-color: rgb(74, 255, 2); */
             float: left;
-            width: 70%;
-            height: 50%;
-            padding: 40px;
+            /* width: 900px; */
+            /* height: 1000px; */
+            /* padding: 40px; */
+            margin-top: 120px;
         }
 
         .box5 {
             float: left;
-            margin-right: 40px;
+            margin-right: 80px;
+            position: relative;
+            cursor: pointer;
         }
 
-        .box6 {}
+        .box6 {
+            float: left;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .text1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.5);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 20px;
+            border: 4px solid white;
+            display: none;
+            z-index: 10;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .box5:hover .text1,
+        .box6:hover .text1 {
+            display: block;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .box5 img,
+        .box6 img {
+            display: block;
+            transition: filter 0.5s ease;
+        }
+
+        .box5:hover img,
+        .box6:hover img {
+            filter: brightness(0.7);
+        }
+
+        .box_xia {
+            width: 100%;
+            max-width: 1520px;
+            margin: 0 auto;
+            /* margin: 50px auto 0; */
+            /* height: 600px; */
+            /* margin-top: 50px; */
+            display: flex;
+            gap: 20px;
+        }
+
+        .boxx1,
+        .boxx2 {
+            width: 300px;
+            height: 550px;
+            /* background-color: rgb(100, 100, 219); */
+            margin-top: 145px;
+            padding: 10px;
+            flex: 1;
+            box-sizing: border-box;
+        }
+
+        .boxx1 img,
+        .boxx2 img {
+            width: 100%;
+            display: block;
+            transition: transform 0.7s ease;
+        }
+
+        .boxx1:hover img,
+        .boxx2:hover img {
+            transform: scale(1.03);
+            opacity: 0.9;
+            /* display: block; */
+        }
+
+        .boxx3 {
+            width: 300px;
+            height: 700px;
+            /* background-color: rgb(95, 95, 223); */
+            padding: 10px;
+            flex: 1;
+            box-sizing: border-box;
+        }
+
+        .boxx3 img {
+            width: 100%;
+            display: block;
+            transition: transform 0.7s ease;
+        }
+
+        .boxx3:hover img {
+            transform: scale(1.03);
+            opacity: 0.9;
+            /* display: block; */
+        }
+
+        .boxx1 h3,
+        .boxx2 h3,
+        .boxx3 h3 {
+            font-size: 18px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        .boxx1 h4,
+        .boxx2 h4,
+        .boxx3 h4 {
+            font-size: 16px;
+            margin: 15px 0;
+            color: #353535;
+        }
+
+        .boxx1 a {
+
+            /* background-color: aqua; */
+            display: block;
+            text-align: right;
+            line-height: 50px;
+            color: #333;
+            text-decoration: none;
+        }
+
+
+        .boxx2 a {
+
+            /* background-color: aqua; */
+            display: block;
+            text-align: right;
+            line-height: 50px;
+            margin-top: 67px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .boxx1 a:hover,
+        .boxx2 a:hover {
+            color: #666;
+        }
+
+
+        .boxx3 a {
+            /* background-color: aqua; */
+            display: block;
+            text-align: right;
+            line-height: 50px;
+            margin-top: 40px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .boxx3 a:hover {
+            color: #666;
+        }
     </style>
 </head>
 
@@ -191,7 +356,7 @@
         <div class="head1">
             <div class="nav">
                 <div class="logo">
-                    <img src="../public/feizi_img/logo.png" alt="logo">
+                    <img src="../practice/img/logo.png" alt="logo">
                 </div>
                 <ul class="nav-menu">
                     <li class="nav-item">
@@ -222,13 +387,13 @@
                 </ul>
             </div>
             <div>
-                <img style="width: 100%;" src="../public/feizi_img/brush2.jpg" alt="">
+                <img style="width: 100%;" src="../practice/img/brush2.jpg" alt="">
             </div>
         </div>
     </div>
     <div class="box">
         <div class="box_left">
-            <img src="../public/feizi_img/aside-view.jpg" alt="">
+            <img src="../practice/img/aside-view.jpg" alt="">
         </div>
 
         <div class="box_right">
@@ -241,15 +406,15 @@
             <div class="box3"></div>
             <div class="box4">查看更多</div>
 
-            <div class="box_left_xai">
+            <div class="box_left_xia">
                 <div class="box5">
-                    <img src="../public/feizi_img/box-p1.jpg" alt="">
-                    <!-- <div class="text1">FEIZI</div> -->
+                    <img src="../practice/img/box-p1.jpg" alt="">
+                    <div class="text1">FEIZI</div>
                 </div>
 
                 <div class="box6">
-                    <img src="../public/feizi_img/box-p2.jpg" alt="">
-                    <!-- <div class="text2">LANAFAY</div> -->
+                    <img src="../practice/img/box-p2.jpg" alt="">
+                    <div class="text1">LANAFAY</div>
                 </div>
 
 
@@ -257,6 +422,34 @@
 
         </div>
     </div>
+    <div class="box_xia">
+        <div class="boxx1">
+            <img src="../practice/img/house.jpg" alt="">
+            <h3>发展历程</h3>
+            <h4>
+                菲姿集团秉承文化与时尚并存，庄重与简约并进，
+                品质 责任 构建追求卓越敢为人先的企业
+                饰文化与生活方式。集团公司坚持品质是根本，服务是关键，原积薄发快速发展，历经市场的考验，不断谱写更加辉煌的篇章。</h4>
+
+            <div> <a href="#">查看更多►</a></div>
+        </div>
+        <div class="boxx2">
+            <img src="../practice/img/runner.jpg" alt="">
+            <h3>企业文化</h3>
+            <h4>品质 责任 构建追求卓越敢为人先的企业终旨;合作 尊重营造共赢共享共创的永续经营</h4>
+
+            <div><a href="#">查看更多►</a></div>
+        </div>
+        <div class="boxx3">
+            <img src="../practice/img/brand.jpg" alt="">
+            <h3>集团资讯</h3>
+            <h4>菲姿2018年度表彰暨"不忘初心，共筑梦想|20."忘初心，共筑梦想，2019我们都是追梦人"上海菲姿有限公司年度晚会于2019年3月29日在［2019]
+            </h4>
+            <div> <a href="#">查看更多►</a></div>
+        </div>
+    </div>
+    <div>
 </body>
 
 </html>
+
