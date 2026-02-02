@@ -14,6 +14,10 @@
         text-decoration: none;
     }
 
+    .boxm:hover {
+        transform: scale(0.5);
+    }
+
     .box {
         width: 100%;
         height: 50px;
@@ -21,7 +25,6 @@
         display: flex;
 
         top: 0;
-
     }
 
     .box1 {
@@ -48,7 +51,6 @@
         }
 
         background-color: darkgray;
-
     }
 
     .box2 {
@@ -130,14 +132,18 @@
         height: 600px;
         background-color: white;
     }
-   
-.boxa1 img{height: 600px;}
+
+    .boxa1 img {
+        height: 600px;
+    }
+
     .boxa2 {
         height: 400px;
         background-color: white;
         margin-left: 20px;
         width: 875px;
     }
+
     .boxa3 {
         width: 100px;
         height: 40px;
@@ -170,7 +176,7 @@
         height: 400px;
         background-color: white;
         display: flex;
-        
+
 
     }
 
@@ -181,50 +187,59 @@
         position: relative;
         overflow: hidden;
     }
-.boxa5 img{
-    width: 400px;transition:0.3s ease;
-}
-.text1{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-   transform: translate(-50%, -50%)scale(1);
-color: white;
-font-size: 18px;
-   font-weight: bold;
-   align-items: center;
-   justify-content: center;
-   opacity: 0;
-   transition: opacity 0.3s ease, transform 0.3s ease;
-   transform:translate(-50%,-50%)scale(1.5);
-   transition: all 0.3s ease cubic-bezier(0.175,0.885,0.42,0.131);
-   padding: 20px;
-   border: 4px solid white;
-   z-index: 10;
-   display: inline-block;
-   min-width: 120px;
-   text-align: center;
-}
-.boxa5:hover .text1{
-    opacity: 1;
-    transform: translate(-50%, -50%)scale(1.1);
-}
-.boxa5:hover img{
-    filter:brightness(0.6)
-}
+
+    .boxa5 img {
+        width: 400px;
+        transition: 0.3s ease;
+    }
+
+    .text1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)scale(1);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: translate(-50%, -50%)scale(1.5);
+        transition: all 0.3s ease cubic-bezier(0.175, 0.885, 0.42, 0.131);
+        padding: 20px;
+        border: 4px solid white;
+        z-index: 10;
+        display: inline-block;
+        min-width: 120px;
+        text-align: center;
+    }
+
+    .boxa5:hover .text1 {
+        opacity: 1;
+        transform: translate(-50%, -50%)scale(1.1);
+    }
+
+    .boxa5:hover img {
+        filter: brightness(0.6)
+    }
+
     .boxa6 {
         margin-left: 50px;
         height: 240px;
         background-color: white;
         float: right;
         flex: 1;
-         position: relative;
+        position: relative;
         overflow: hidden;
 
     }
-.boxa6 img{
-    width: 400px;transition:0.3s ease;
-}
+
+    .boxa6 img {
+        width: 400px;
+        transition: 0.3s ease;
+    }
+
     .boxz {
         width: 100%;
         height: 700px;
@@ -233,34 +248,37 @@ font-size: 18px;
 
         gap: 20px;
     }
-.text2{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-   transform: translate(-50%, -50%)scale(1);
-color: white;
-font-size: 18px;
-   font-weight: bold;
-   align-items: center;
-   justify-content: center;
-   opacity: 0;
-   transition: opacity 0.3s ease, transform 0.3s ease;
-   transform:translate(-50%,-50%)scale(1.5);
-   transition: all 0.3s ease cubic-bezier(0.175,0.885,0.42,0.131);
-   padding: 20px;
-   border: 4px solid white;
-   z-index: 10;
-   display: inline-block;
-   min-width: 120px;
-   text-align: center;
-}
-.boxa6:hover .text2{
-    opacity: 1;
-    transform: translate(-50%, -50%)scale(1.1);
-}
-.boxa6:hover img{
-    filter:brightness(0.6)
-}
+
+    .text2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)scale(1);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: translate(-50%, -50%)scale(1.5);
+        transition: all 0.3s ease cubic-bezier(0.175, 0.885, 0.42, 0.131);
+        padding: 20px;
+        border: 4px solid white;
+        z-index: 10;
+        display: inline-block;
+        min-width: 120px;
+        text-align: center;
+    }
+
+    .boxa6:hover .text2 {
+        opacity: 1;
+        transform: translate(-50%, -50%)scale(1.1);
+    }
+
+    .boxa6:hover img {
+        filter: brightness(0.6)
+    }
 
     .boxz1 {
         width: 400px;
@@ -329,7 +347,6 @@ font-size: 18px;
         height: 300px;
         background-color: white;
         color: black
-
     }
 
     .boxs2 {
@@ -421,6 +438,11 @@ font-size: 18px;
 
         </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="boxz">
         <div class="boxz1">
             <img src="./img/house.jpg" alt="">
@@ -431,7 +453,7 @@ font-size: 18px;
                 饰文化与生活方式。集团公司坚持品质是根本，服务是关键，原积薄发快速发展，历经市场的考验，不断谱写更加辉煌的篇章。</h3>
             <br>
             <br>
-            <div> <a style="margin-left: 380px;" href="">查看更多►</a></div>
+            <div> <a style="margin-left: 380px;text-decoration: underline;                                                               " href="">查看更多►</a></div>
         </div>
         <div class="boxz2">
             <img src="./img/runner.jpg" alt="">
@@ -440,13 +462,13 @@ font-size: 18px;
             <br>
             <br>
             <br><br>
-            <div><a style="margin-left: 380px;" href="">查看更多►</a></div>
+            <div><a style="margin-left: 380px;text-decoration: underline;" href="">查看更多►</a></div>
         </div>
         <div class="boxz3">
             <img src="./img/brand.jpg" alt="">
             <h3>菲姿2018年度表彰暨"不忘初心，共筑梦想|20."忘初心，共筑梦想，2019我们都是追梦人"上海菲姿有限公司年度晚会于2019年3月29日在［2019]
             </h3>
-            <div> <a style="margin-left: 380px;" href="">查看更多►</a></div>
+            <div> <a style="margin-left: 380px;text-decoration: underline;" href="">查看更多►</a></div>
         </div>
     </div>
     <div>
@@ -485,6 +507,7 @@ font-size: 18px;
 
 
     </div>
+
 </body>
 
 </html>
