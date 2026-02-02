@@ -1,0 +1,78 @@
+/* reset 重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+li {
+    list-style: none;
+}
+
+
+.container {
+    width: 1200px;
+    /*  */
+    margin: 0 auto;
+}
+
+.container .header {
+    height: 100px;
+}
+
+.container .header .nav {
+    height: 100px;
+    /* background-color: #f60; */
+    float: right;
+}
+
+.container .header .nav ul {
+    line-height: 100px;
+}
+
+.container .header .nav ul li {
+    display: inline-block;
+    line-height: 40px;
+    width: 102px;
+    height: 40px;
+    /* background-color: #EBEBEB; */
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container .header .nav ul li:hover {
+    background-color: #EBEBEB;
+   
+}
+
+.container .header .nav ul li .sub-nav {
+    position: absolute;
+    top: 100px;
+    background-color: #EBEBEB;
+    width: 182px;
+    opacity: 0;
+    
+    transition: all 0.3s ease;
+}
+.container .header .nav ul li:hover .sub-nav {
+    opacity: 1;
+    top: 70px;
+}
+
+.container .header .nav ul li .sub-nav div {
+    width: 142px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ffffff;
+}
+.container .header .nav ul li .sub-nav div a {
+    color: #999;
+}
+.container .header .nav ul li .sub-nav div a:hover {
+    color: #000;
+}
