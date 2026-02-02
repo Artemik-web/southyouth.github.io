@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .top {
+            height: 100px;
+            margin: 0 auto;
+            width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top_left {
+            display: flex;
+            align-items: center;
+        }
+
+        .top_right {
+            display: flex;
+            align-items: center;
+            height: 100px;
+        }
+
+        .top_right a {
+            width: 102px;
+            font-size: 16px;
+            line-height: 40px;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+        }
+
+        .top_right_one {
+            position: relative;
+        }
+
+        .drop_low li a {
+            font-size: 12px;
+            color: darkgray;
+            padding: 0 10px;
+            display: block;
+            width: 100%;
+            line-height: 36px;
+            margin-top: 0px;
+
+        }
+
+        .top_right_one:hover>a {
+            background-color: rgb(238, 240, 240);
+            transition: background-color 0.2s ease;
+        }
+
+        .drop_low {
+            list-style: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            /* max-height: 0;  */
+            /* overflow: hidden;  */
+            position: absolute;
+            top: 40px;
+            left: 0px;
+            width: 180px;
+            padding: 0;
+            margin: 0;
+            z-index: 99999;
+            background-color: rgb(238, 240, 240);
+            transition: all 0.3s ease;
+        }
+
+        .top_right_one:hover .drop_low {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            max-height: 200px;
+
+        }
+
+        .neirong {
+            margin: 40px auto;
+            width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .picture_two img {
+            float: left;
+        }
+
+        .neirong_right_top h1 {
+            float: left;
+        }
+        .neirong_right_top a{
+            float: left;
+        }
+        .neirong_right {
+            height: 560px;
+            margin: 0 20px 0 20px;
+            position: relative;
+            padding-bottom: 120px;
+        }
+
+        .neirong_right_low {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="top">
+                <div class="top_left">
+                    <a><img src="../practice/img/logo.png"></a>
+                </div>
+                <div class="top_right">
+                    <div class="top_right_one">
+                        <a href="#" class="drop_one"><strong>关于集团</strong>
+                            <ul class="drop_low">
+                                <li>
+                                    <a href="#">集团简介</a>
+                                </li>
+                                <li>
+                                    <a href="#">发展历程</a>
+                                </li>
+                                <li>
+                                    <a href="#">企业文化</a>
+                                </li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="top_right_one">
+                        <a href="#"><strong>集团咨询</strong></a>
+                    </div>
+                    <div class="top_right_one">
+                        <a href="#" class="drop_one"><strong>旗下品牌</strong>
+                            <ul class="drop_low">
+                                <li>
+                                    <a href="#">菲资FEIZI</a>
+                                </li>
+                                <li>
+                                    <a href="#">啦娜菲LANAFEI</a>
+                                </li>
+                            </ul>
+                        </a>
+                    </div>
+                    <div class="top_right_one">
+                        <a href="#" class="drop_one"><strong>人才发展</strong>
+                            <ul class="drop_low">
+                                <li>
+                                    <a href="#">人才政策</a>
+                                </li>
+                                <li>
+                                    <a href="#">工作机会</a>
+                                </li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="picture_one">
+            <img src="../practice/img/brush2.jpg">
+        </div>
+        <div class="neirong">
+            <div class="neirong_left">
+                <div class="picture_two">
+                    <img src="../practice/img/aside-view.jpg">
+                </div>
+            </div>
+            <div class="neirong_right">
+                <div class="neirong_right_top">
+                    <h1>集团介绍</h1><br><br>
+                    <p>创立于1992年的菲姿时尚集团是集研发,生产,品牌管理,服务与一体的大型现代化品牌企业。28年来集团始终坚持国际化的品牌经营理念,现已发展成为现已发展成为一家多品牌、集团化运作的知名时尚品牌企业。1999年集团总部落户上海,占地100多亩,坐拥近万平方现代时尚的办
+                        公环境。具有深厚品牌文化理念，自主创新研发设计中心、现代化生产基地、仓储物流、高效运营服务体系融合的时尚服装公司。集团
+                        有员工近:000名,菲姿时尚集团实施品牌战略，可持续发展，创新发展之路，不断加大品牌化，品牌集团化"奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。
+                        建设力度，为努力实现"集团品牌化，品牌集团化"奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。</p>
+                </div>
+                <div class="neirong_right_low">
+                    <img src="../practice/img/box-p1.jpg"></im>
+                    <img src="../practice/img/box-p2.jpg"></im>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="../practice/img/house.jpg">
+            <img src="../practice/img/runner.jpg">
+            <img src="../practice/img/brand.jpg">
+        </div>
+    </div>
+</body>
+
+</html>

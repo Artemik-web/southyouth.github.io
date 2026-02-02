@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,87 +9,446 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            /* box-sizing: border-box; */
         }
-       
+
+
+
         .head {
             width: 100%;
-            height: 1200px;
+            /* height: 1200px; */
             background-color: rgb(50, 42, 165);
-           
-            padding-top: 67px; 
+            padding-top: 67px;
+        }
+
+        .head1 {
+            width: 1520px;
+            background-color: chartreuse;
+            margin: 0 auto;
         }
 
         .nav {
             height: 67px;
             background-color: rgb(233, 14, 14);
             position: fixed;
-            top: 0; 
-            z-index: 9999; 
-            left: 160px;
-            right: 160px;
+            top: 0;
+            z-index: 9999;
+            left: 0;
+            right: 0;
+            max-width: 1520px;
+
+            margin: 0 auto;
             display: flex;
             align-items: center;
-            justify-content: space-between; 
-            gap: 20px; 
+            justify-content: space-between;
+            gap: 20px;
         }
+
 
         .logo {
             display: flex;
             align-items: center;
+            cursor: pointer;
         }
+
         .logo img {
-           
             object-fit: contain;
         }
 
-        .right {
-            width: 50%;
-            height: 100%; 
-            background-color: burlywood;
+        .nav-menu {
             display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            margin-right: 10px;
+            list-style: none;
+            gap: 0;
         }
 
-        .right ul {
-            list-style: none;
+        .nav-item {
+            position: relative;
+            height: 67px;
             display: flex;
-            gap: 20px; 
-           
+            align-items: center;
+            padding: 0 15px;
         }
-        .right ul li a {
-            color: #000000;
+
+        .nav-item a {
+            color: #000;
             text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+        }
+
+        .nav-item:hover {
+            background-color: darkgray;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 130px;
+            background-color: darkgray;
+            display: none;
+            padding: 10px 0;
+            opacity: 0.8;
+        }
+
+        .dropdown-item {
+            padding: 8px 15px;
+            color: #000;
+            cursor: pointer;
+            border-bottom: 1px solid white;
+        }
+
+        .dropdown-item:hover {
+            background-color: #b0b0b0;
+        }
+
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+
+        .box {
+            width: 100%;
+            /* height: 1000px; */
+            background-color: burlywood;
+            /* margin: 0 165px; */
+            max-width: 1520px;
+
+            margin: 0 auto;
+            margin-top: 37px;
+            overflow: hidden
+        }
+
+        .box_left {
+            background-color: brown;
+            width: 550px;
+            width: calc(100% - 920px);
+            /* height:750px ; */
+            float: left;
+
+        }
+
+        .box_left img {
+            width: 100%;
+            display: block;
+
+        }
+
+        .box_right {
+            background-color: aqua;
+            float: right;
+            width: 850px;
+            margin-top: 70px;
+            margin-right: 10px;
+
+        }
+
+        .box_right p {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            line-height: 2.0;
+
+        }
+
+        .box3 {
+            width: 100px;
+            height: 40px;
+            background-color: rgb(15, 14, 14);
+            margin-left: 700px;
+            margin-top: 40px;
+        }
+
+        .box3:hover {
+            background-color: darkgray;
             cursor: pointer;
         }
-       
-            .right ul {
-                gap: 15px;
-            }
-            .right ul li a {
-                font-size: 16px;
-            }
-        
+
+        .box4 {
+            width: 100px;
+            height: 40px;
+            background-color: rgb(15, 14, 14);
+            margin-left: 800px;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            margin-top: -20px;
+        }
+
+        .box4:hover {
+            background-color: darkgray;
+            cursor: pointer;
+        }
+
+        .box_left_xia {
+            background-color: rgb(74, 255, 2);
+            float: left;
+            /* width: 900px; */
+            /* height: 1000px; */
+            /* padding: 40px; */
+            margin-top: 120px;
+        }
+
+        .box5 {
+            float: left;
+            margin-right: 80px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .box6 {
+            float: left;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .text1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.5);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 20px;
+            border: 4px solid white;
+            display: none;
+            z-index: 10;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .box5:hover .text1,
+        .box6:hover .text1 {
+            display: block;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .box5 img,
+        .box6 img {
+            display: block;
+            transition: filter 0.5s ease;
+        }
+
+        .box5:hover img,
+        .box6:hover img {
+            filter: brightness(0.7);
+        }
+
+        .box_xia {
+            width: 100%;
+            max-width: 1520px;
+            margin: 0 auto;
+            /* margin: 50px auto 0; */
+            /* height: 600px; */
+            /* margin-top: 50px; */
+            display: flex;
+            gap: 20px;
+        }
+
+        .boxx1,
+        .boxx2 {
+            width: 300px;
+            height: 550px;
+            background-color: rgb(100, 100, 219);
+            margin-top: 145px;
+            padding: 10px;
+            flex: 1;
+            box-sizing: border-box;
+        }
+
+        .boxx1 img,
+        .boxx2 img {
+            width: 100%;
+            display: block;
+            transition: transform 0.7s ease;
+        }
+
+        .boxx1:hover img,
+        .boxx2:hover img {
+            transform: scale(1.03);
+            opacity: 0.9;
+            /* display: block; */
+        }
+
+        .boxx3 {
+            width: 300px;
+            height: 700px;
+            background-color: rgb(95, 95, 223);
+            padding: 10px;
+            flex: 1;
+            box-sizing: border-box;
+        }
+
+        .boxx3 img {
+            width: 100%;
+            display: block;
+            transition: transform 0.7s ease;
+        }
+
+        .boxx3:hover img {
+            transform: scale(1.03);
+            opacity: 0.9;
+            /* display: block; */
+        }
+
+        .boxx1 h3,
+        .boxx2 h3,
+        .boxx3 h3 {
+            font-size: 18px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        .boxx1 h4,
+        .boxx2 h4,
+        .boxx3 h4 {
+            font-size: 16px;
+            margin: 15px 0;
+            color: #353535;
+        }
+
+        .boxx1 a {
+
+            background-color: aqua;
+            display: block;
+            text-align: right;
+            line-height: 50px;
+            color: #333;
+            text-decoration: none;
+        }
+
+
+        .boxx2 a {
+
+            background-color: aqua;
+            display: block;
+            text-align: right;
+            line-height: 50px;
+            margin-top: 67px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .boxx1 a:hover,
+        .boxx2 a:hover {
+            color: #666;
+        }
+
+
+        .boxx3 a {
+            background-color: aqua;
+            display: block;
+            text-align: right;
+            line-height: 50px;
+            margin-top: 40px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .boxx3 a:hover {
+            color: #666;
+        }
     </style>
 </head>
+
 <body>
     <div class="head">
-        <div class="nav">
-            <div class="logo">
-                <img src="../public/feizi_img/logo.png" alt="企业logo">
-            </div>
-            <div class="right">
-                <ul>
-                    <li><a href="#">关于集团</a></li>
-                    <li><a href="#">集团资讯</a></li>
-                    <li><a href="#">旗下品牌</a></li>
-                    <li><a href="#">人才发展</a></li>
+        <div class="head1">
+            <div class="nav">
+                <div class="logo">
+                    <img src="../public/feizi_img/logo.png" alt="logo">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#">关于集团</a>
+                        <div class="dropdown">
+                            <div class="dropdown-item">集团简介</div>
+                            <div class="dropdown-item">发展历程</div>
+                            <div class="dropdown-item">企业文化</div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">集团资讯</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">旗下品牌</a>
+                        <div class="dropdown">
+                            <div class="dropdown-item">菲姿FEIZI</div>
+                            <div class="dropdown-item">啦娜菲LANAFAY</div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">人才资讯</a>
+                        <div class="dropdown">
+                            <div class="dropdown-item">人才政策</div>
+                            <div class="dropdown-item">工作机会</div>
+                        </div>
+                    </li>
                 </ul>
+            </div>
+            <div>
+                <img style="width: 100%;" src="../public/feizi_img/brush2.jpg" alt="">
             </div>
         </div>
     </div>
-</body>
-</html>
+    <div class="box">
+        <div class="box_left">
+            <img src="../public/feizi_img/aside-view.jpg" alt="">
+        </div>
 
+        <div class="box_right">
+            <h3>集团介绍</h3>
+            <p>
+                创立于1992年的菲姿时尚集团是集研发，生产，品牌管理，服务与一体的大型现代化品牌企业。28年来集团始终坚持国际化的品牌经营理念，现已发展成为现已发展成为一家多品牌、集团化运作的知名时尚品牌企业。1999年集团总部落户上海，占地100多亩，坐拥近万平方现代时尚的办
+                公环境。具有深厚品牌文化理念，自主创新研发设计中心、现代化生产基地、仓储物流、高效运营服务体系融合的时尚服装公司。集团
+                有员工近：000名，菲姿时尚集团实施品牌战略，可持续发展，创新发展之路，不断加大品牌化，品牌集团化"奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。
+                建设力度，为努力实现"集团品牌化，品牌集团化"奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。</p>
+            <div class="box3"></div>
+            <div class="box4">查看更多</div>
+
+            <div class="box_left_xia">
+                <div class="box5">
+                    <img src="../public/feizi_img/box-p1.jpg" alt="">
+                    <div class="text1">FEIZI</div>
+                </div>
+
+                <div class="box6">
+                    <img src="../public/feizi_img/box-p2.jpg" alt="">
+                    <div class="text1">LANAFAY</div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="box_xia">
+        <div class="boxx1">
+            <img src="../public/feizi_img/house.jpg" alt="">
+            <h3>发展历程</h3>
+            <h4>
+                菲姿集团秉承文化与时尚并存，庄重与简约并进，
+                品质 责任 构建追求卓越敢为人先的企业
+                饰文化与生活方式。集团公司坚持品质是根本，服务是关键，原积薄发快速发展，历经市场的考验，不断谱写更加辉煌的篇章。</h4>
+
+            <div> <a href="#">查看更多►</a></div>
+        </div>
+        <div class="boxx2">
+            <img src="../public/feizi_img/runner.jpg" alt="">
+            <h3>企业文化</h3>
+            <h4>品质 责任 构建追求卓越敢为人先的企业终旨;合作 尊重营造共赢共享共创的永续经营</h4>
+
+            <div><a href="#">查看更多►</a></div>
+        </div>
+        <div class="boxx3">
+            <img src="../public/feizi_img/brand.jpg" alt="">
+            <h3>集团资讯</h3>
+            <h4>菲姿2018年度表彰暨"不忘初心，共筑梦想|20."忘初心，共筑梦想，2019我们都是追梦人"上海菲姿有限公司年度晚会于2019年3月29日在［2019]
+            </h4>
+            <div> <a href="#">查看更多►</a></div>
+        </div>
+    </div>
+    <div>
+</body>
+
+</html>
