@@ -9,24 +9,19 @@
         * {
             margin: 0;
             padding: 0;
-            /* box-sizing: border-box; */
+            box-sizing: border-box;
         }
-
-
-
         .head {
             width: 100%;
             /* height: 1200px; */
             /* background-color: rgb(50, 42, 165); */
             padding-top: 67px;
         }
-
         .head1 {
             width: 1520px;
             /* background-color: chartreuse; */
             margin: 0 auto;
         }
-
         .nav {
             height: 67px;
             /* background-color: rgb(233, 14, 14); */
@@ -36,7 +31,6 @@
             left: 0;
             right: 0;
             max-width: 1520px;
-
             margin: 0 auto;
             display: flex;
             align-items: center;
@@ -61,50 +55,66 @@
             gap: 0;
         }
 
-        .nav-item {
-            position: relative;
-            height: 67px;
-            display: flex;
-            align-items: center;
-            padding: 0 15px;
-        }
+    
 
         .nav-item a {
             color: #000;
             text-decoration: none;
             font-size: 16px;
             font-weight: bold;
-            display: block;
+            /* display: block; */
+            /* background-color: aqua; */
         }
 
+        .nav-item {
+            position: relative;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+
         .nav-item:hover {
-            background-color: darkgray;
+            background-color: #e3e1e1;
         }
 
         .dropdown {
             position: absolute;
             top: 100%;
             left: 0;
-            width: 130px;
-            background-color: darkgray;
-            display: none;
-            padding: 10px 0;
-            opacity: 0.8;
+            width: 140px;
+            background-color: #e3e1e1;
+            /* display: none; */
+            opacity: 0;
+            /* opacity: 0.8; */
+            transition: all 0.3s ease;
+            visibility: hidden;
+            transform: translateY(10px);
         }
 
         .dropdown-item {
             padding: 8px 15px;
-            color: #000;
+            color: #656565;
             cursor: pointer;
             border-bottom: 1px solid white;
+            text-align: center;
+            width: 100px;
+            margin: 0 auto;
+            /* transition: all 3s ease; */
+
         }
 
         .dropdown-item:hover {
-            background-color: #b0b0b0;
+            /* background-color: #817f7f; */
+            color: #000;
         }
 
         .nav-item:hover .dropdown {
-            display: block;
+            opacity: 0.8;
+            visibility: visible;
+            transform: translateY(0);
+
         }
 
         .box {
@@ -153,7 +163,7 @@
         .box3 {
             width: 100px;
             height: 40px;
-            background-color: rgb(15, 14, 14);
+            background-color: rgb(100, 100, 100);
             margin-left: 650px;
             margin-top: 40px;
         }
@@ -166,7 +176,7 @@
         .box4 {
             width: 100px;
             height: 40px;
-            background-color: rgb(15, 14, 14);
+            background-color: rgb(100, 100, 100);
             margin-left: 750px;
             color: white;
             text-align: center;
@@ -205,22 +215,33 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) scale(1.5);
+            transform: translate(-50%, -50%) scale(1.2);
             color: white;
             font-size: 18px;
             font-weight: bold;
             padding: 20px;
             border: 4px solid white;
-            display: none;
+            /* display: none; */
+            transition: all 0.3s ease;
+            opacity: 0;
             z-index: 10;
             min-width: 120px;
             text-align: center;
+
+        }
+
+
+
+        .brand-item:hover .brand-text {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
         }
 
         .box5:hover .text1,
         .box6:hover .text1 {
-            display: block;
-            transform: translate(-50%, -50%) scale(1.1);
+            /* display: block; */
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
         }
 
         .box5 img,
@@ -231,7 +252,7 @@
 
         .box5:hover img,
         .box6:hover img {
-            filter: brightness(0.7);
+            filter: brightness(0.5);
         }
 
         .box_xia {
@@ -249,7 +270,7 @@
         .boxx2 {
             width: 300px;
             height: 550px;
-            /* background-color: rgb(100, 100, 219); */
+            background-color: #e3e1e1;
             margin-top: 145px;
             padding: 10px;
             flex: 1;
@@ -273,22 +294,21 @@
         .boxx3 {
             width: 300px;
             height: 700px;
-            /* background-color: rgb(95, 95, 223); */
+            background-color: #e3e1e1;
             padding: 10px;
             flex: 1;
-            box-sizing: border-box;
         }
 
         .boxx3 img {
             width: 100%;
-            display: block;
-            transition: transform 0.7s ease;
+
         }
 
         .boxx3:hover img {
-            transform: scale(1.03);
+            transform: scale(1.02);
             opacity: 0.9;
             /* display: block; */
+            transition: transform 0.7s ease;
         }
 
         .boxx1 h3,
@@ -309,7 +329,6 @@
 
         .boxx1 a {
 
-            /* background-color: aqua; */
             display: block;
             text-align: right;
             line-height: 50px;
@@ -348,6 +367,98 @@
         .boxx3 a:hover {
             color: #666;
         }
+
+        /* =======footer======= */
+        .footer {
+            width: 1520px;
+            height: 300px;
+            display: flex;
+            background-color: white;
+            justify-content: space-around;
+            border-top: 1px solid #ccc;
+            margin: 140px auto 50px auto;
+        }
+
+        .boxf1 {
+            width: 100px;
+            height: 300px;
+            background-color: white;
+            color: black;
+            margin-top: 40px;
+        }
+
+        .boxf2 {
+            width: 100px;
+            height: 300px;
+            background-color: white;
+            color: black;
+            margin-top: 40px;
+        }
+
+        .boxf3 {
+            width: 100px;
+            height: 300px;
+            background-color: white;
+            color: black;
+            margin-top: 40px;
+        }
+
+        .boxf4 {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            color: black;
+            border-right: 1px dashed #ccc;
+            margin-top: 40px;
+        }
+
+        .boxf5 {
+            width: 400px;
+            height: 300px;
+            background-color: white;
+            color: black;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: rgb(174, 172, 172);
+        }
+
+        .footer .boxf5 a {
+            color: #302f2f;
+        }
+
+        .end {
+            width: 100%;
+            height: 50px;
+            background-color: #000000;
+            /* margin-top: 50px; */
+            text-align: center;
+        }
+
+        .end h3 {
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            display: inline-block;
+            margin: 0 auto;
+            color: #f7f7f7;
+            font-size: 14px;
+            font-weight: 350;
+            ;
+        }
+
+        .end a {
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            display: inline-block;
+            margin: 0 auto;
+            text-decoration: none;
+            color: #9c9898;
+            font-size: 14px;
+        }
     </style>
 </head>
 
@@ -374,7 +485,7 @@
                         <a href="#">旗下品牌</a>
                         <div class="dropdown">
                             <div class="dropdown-item">菲姿FEIZI</div>
-                            <div class="dropdown-item">啦娜菲LANAFAY</div>
+                            <div class="dropdown-item">啦娜菲</div>
                         </div>
                     </li>
                     <li class="nav-item">
@@ -387,6 +498,7 @@
                 </ul>
             </div>
             <div>
+                <!-- <img style="width: 100%;" src="../public/feizi_img/brush2.jpg" alt=""> -->
                 <img style="width: 100%;" src="../practice/img/brush2.jpg" alt="">
             </div>
         </div>
@@ -448,8 +560,40 @@
             <div> <a href="#">查看更多►</a></div>
         </div>
     </div>
-    <div>
+    <div class="footer">
+        <div class="boxf1">
+            <h3>关于集团</h3>
+            <div><a href="#">集团简介</a></div>
+            <div><a href="#">发展历程</a></div>
+            <div><a href="#">企业文化</a></div>
+        </div>
+        <div class="boxf2">
+            <h3>集团资讯</h3>
+        </div>
+        <div class="boxf3">
+            <h3>旗下品牌</h3>
+            <div><a href="菲姿FEIZI">菲姿FEIZI</a></div>
+            <div><a href="啦娜菲LANAFAY">啦娜菲LANAFAY</a></div>
+        </div>
+        <div class="boxf4">
+            <h3>人才资讯</h3>
+            <div><a href="#">人才政策</a></div>
+            <div><a href="#">工作机会</a></div>
+
+        </div>
+        <div class="boxf5">
+            <h3>联系我们</h3>
+            <div><a href="#">TEL : 021-67626666</a></div>
+            <div><a href="#">E-MAL :HR@feizi.com</a></div>
+            <div><a href="#">FAX :021-67627878</a></div>
+            <div><a href="#">总部 ：上海市松江区九亭镇久富开发区盛龙路1号</a></div>
+        </div>
+    </div>
+    <div class="end">
+        <h3>COPYRIGHT @ 2016 FEIZI GROUP</h3>
+        <a href="#">沪ICP备14042087号-1</a>
+    </div>
+
 </body>
 
 </html>
-
