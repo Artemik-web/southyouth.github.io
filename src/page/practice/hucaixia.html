@@ -29,88 +29,150 @@
 
     .box1 {
         width: 90px;
+        line-height: 40px;
         height: 40px;
-        background-color: white;
-        margin-left: 68%;
-    }
-
-    .box6 {
-        width: 130px;
-        height: 100px;
-        background-color: darkgray;
-        display: none;
-        margin-top: 20px;
+        text-align: center;
+        margin-left: 60%;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
         position: relative;
     }
 
+    .box6 {
+        opacity: 0;
+      transition: all 0.3s ease;
+        top: 100px;
+        position: absolute;
+        background-color: #EBEBEB;
+        width: 182PX;
+
+
+    }
+
+    .box6 div {
+        width: 142PX;
+        margin: 0 auto;
+        border-bottom: 1px solid white;
+
+    }
+.box6 a{
+    color: #999;
+}
+.box6 a:hover{
+    color: #000;
+}
     .box1:hover {
 
         .box6 {
-            display: block;
-            background-color: darkgray;
+            opacity: 1;
+            background-color: #EBEBEB;
+            color: black;
+            top: 40px;
         }
 
-        background-color: darkgray;
+        background-color: #EBEBEB;
     }
 
     .box2 {
         width: 90px;
+        line-height: 40px;
         height: 40px;
-        background-color: white;
+        text-align: center;
+
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
     }
 
     .box2:hover {
-        background-color: darkgray;
+        background-color: #EBEBEB;
+
     }
 
     .box3 {
         width: 90px;
+        line-height: 40px;
         height: 40px;
-        background-color: white;
+        text-align: center;
+
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
     }
 
     .box7 {
-        width: 130px;
-        height: 100px;
-        background-color: darkgray;
-        display: none;
-        margin-top: 20px;
-        position: relative;
-    }
+        opacity: 0;
+        position: absolute;
+        background-color: #EBEBEB;
+        width: 182PX;
+ transition: all 0.3s ease;
+        top: 100px;
 
+    }
+.box7 a{
+    color: #999;
+}
+.box7 a:hover{
+    color: #000;
+}
+    .box7 div {
+        width: 142PX;
+        margin: 0 auto;
+        border-bottom: 1px solid white;
+    }
 
     .box3:hover {
         .box7 {
-            display: block;
-            background-color: darkgray;
+            opacity: 1;
+            background-color: #EBEBEB;
+            color: black;
+            top: 40px;
         }
 
-        background-color: darkgray;
+        background-color: #EBEBEB;
     }
 
     .box8 {
-        width: 130px;
-        height: 100px;
-        background-color: darkgray;
-        display: none;
-        position: relative;
-        margin-top: 20px;
+        opacity: 0;
+        
+        position: absolute;
+        background-color: #EBEBEB;
+        width: 182PX;
+transition: all 0.3s ease;
+        top: 100px;
+    }
+.box8 a{
+    color: #999;
+}
+.box8 a:hover{
+    color: #000;
+}
+    .box8 div {
+        width: 142PX;
+        margin: 0 auto;
+        border-bottom: 1px solid white;
     }
 
     .box4 {
         width: 90px;
+        line-height: 40px;
         height: 40px;
-        background-color: white;
+        text-align: center;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
     }
 
     .box4:hover {
-        background-color: darkgray;
-
         .box8 {
-            display: block;
-            background-color: darkgray;
+            opacity: 1;
+            background-color: #EBEBEB;
+            color: black;
+            top: 40px;
         }
 
+        background-color: #EBEBEB;
     }
 
     .box5 {
@@ -385,23 +447,24 @@
         <div class="box5"><a href=""><b style="font-size:25px;"> 菲姿时尚集团 </b></a></div>
         <div class="box1"> <b><a href="">关于集团</a></b>
             <div class="box6">
-                <div>集团简介</div>
-                <div>发展历程</div>
-                <div>企业文化</div>
+                <div><a href="">集团简介</a></div>
+                <div><a href="">发展历程</a></div>
+                <div><a href="">企业文化</a></div>
             </div>
         </div>
         <div class="box2"><b> <a href="">集团资讯</a></b></div>
         <div class="box3"><b><a href="">旗下品牌</a></b>
             <div class="box7">
-                <div style="  border-bottom: 1px solid white;">菲姿FEIZI</div>
-                <div>啦娜菲LANAFAY</div>
+                <div><a href="">菲姿FEIZI</a></div>
+                <div><a href="">啦娜菲LANAFAY</a></div>
 
             </div>
         </div>
         <div class="box4"><b><a href="">人才资讯</a></b>
             <div class="box8">
-                <div>人才政策</div>
-                <div>工作机会</div>
+                <div><a href="">工作机会</a></div>
+                <div><a href="">人才政策</a></div>
+
             </div>
         </div>
     </div>
@@ -453,7 +516,8 @@
                 饰文化与生活方式。集团公司坚持品质是根本，服务是关键，原积薄发快速发展，历经市场的考验，不断谱写更加辉煌的篇章。</h3>
             <br>
             <br>
-            <div> <a style="margin-left: 380px;text-decoration: underline;                                                               " href="">查看更多►</a></div>
+            <div> <a style="margin-left: 380px;text-decoration: underline;                                                               "
+                    href="">查看更多►</a></div>
         </div>
         <div class="boxz2">
             <img src="./img/runner.jpg" alt="">
