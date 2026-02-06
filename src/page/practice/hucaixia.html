@@ -46,17 +46,17 @@
             background-color: white;
             margin-left: 60%;
             width: 100px;
-         
+
         }
 
         .box6 a {
             color: #999;
-            
+
         }
 
         .box6 a:hover {
             color: #000;
-           
+
         }
 
         .box6 {
@@ -67,15 +67,15 @@
             opacity: 0;
             transition: all 0.3s ease;
             z-index: 99999;
-            
-            
+
+
         }
 
         .box6 div {
             width: 142px;
             margin: 0 auto;
             border-bottom: 1px solid #ffffff;
-         
+
         }
 
         .box7 div {
@@ -131,7 +131,7 @@
             width: 182px;
             opacity: 0;
             transition: all 0.3s ease;
-             z-index: 99999;
+            z-index: 99999;
         }
 
 
@@ -168,7 +168,7 @@
             width: 182px;
             opacity: 0;
             transition: all 0.3s ease;
-             z-index: 99999;
+            z-index: 99999;
         }
 
         .box4 {
@@ -205,11 +205,14 @@
             height: 600px;
             background-color: white;
             display: flex;
+            overflow: hidden;
         }
 
         .boxa1 {
             height: 600px;
             background-color: white;
+            transform: translateX(-410px);
+            animation: run 0.5s ease forwards
         }
 
         .boxa1 img {
@@ -221,25 +224,34 @@
             background-color: white;
             margin-left: 20px;
             width: 780px;
+            transform: translateX(810px);
+            animation: run 0.5s ease forwards;
+        }
+
+        @keyframes run {
+            100% {
+                transform: translateX(0);
+            }
         }
 
         .boxa3 {
             width: 100px;
             height: 40px;
-            background-color: rgb(15, 14, 14);
-            margin-left:550px;
+            background-color: #555;
+            margin-left: 590px;
+
         }
 
         .boxa3:hover {
-            background-color: darkgray;
+            background-color: #777;
             cursor: pointer;
         }
 
         .boxa4 {
             width: 100px;
             height: 40px;
-            background-color: rgb(15, 14, 14);
-            margin-left: 650px;
+            background-color: #555;
+            margin-left: 680px;
             color: white;
             text-align: center;
             line-height: 40px;
@@ -265,6 +277,8 @@
             flex: 1;
             position: relative;
             overflow: hidden;
+            margin-top: 30px;
+            margin-left: 40px;
         }
 
         .boxa5 img {
@@ -287,16 +301,16 @@
             transform: translate(-50%, -50%)scale(1.5);
             transition: all 0.3s ease cubic-bezier(0.175, 0.885, 0.42, 0.131);
             padding: 20px;
-            border: 4px solid white;
+            border: 3px solid white;
             z-index: 10;
             display: inline-block;
-            min-width: 120px;
+            min-width: 220px;
             text-align: center;
         }
 
         .boxa5:hover .text1 {
             opacity: 1;
-            transform: translate(-50%, -50%)scale(1.1);
+            transform: translate(-50%, -50%)scale(1);
         }
 
         .boxa5:hover img {
@@ -311,6 +325,7 @@
             flex: 1;
             position: relative;
             overflow: hidden;
+            margin-top: 30px;
 
         }
 
@@ -342,16 +357,16 @@
             transform: translate(-50%, -50%)scale(1.5);
             transition: all 0.3s ease cubic-bezier(0.175, 0.885, 0.42, 0.131);
             padding: 20px;
-            border: 4px solid white;
+            border: 3px solid white;
             z-index: 10;
             display: inline-block;
-            min-width: 120px;
+            min-width: 220px;
             text-align: center;
         }
 
         .boxa6:hover .text2 {
             opacity: 1;
-            transform: translate(-50%, -50%)scale(1.1);
+            transform: translate(-50%, -50%)scale(1);
         }
 
         .boxa6:hover img {
@@ -359,27 +374,30 @@
         }
 
         .boxz1 {
-            width: 400px;
+           width: 400px;
             height: 600px;
             background-color: aliceblue;
-            margin-top: 50px;
+            margin-top: 80px;
             flex: 1;
         }
 
         .boxz1 img {
-            transition: transform 2s ease;
+           
+  transition: transform 2s ease;
         }
-
-        .boxz1:hover img {
+        
+            
+    
+         .boxz1:hover img {
             transform: scale(1.03);
             opacity: 0.9;
-        }
-
+            z-index: 10;
+        } 
         .boxz2 {
             width: 400px;
             height: 600px;
             background-color: aliceblue;
-            margin-top: 50px;
+            margin-top: 80px;
             flex: 1;
         }
 
@@ -397,6 +415,7 @@
             height: 650px;
             background-color: aliceblue;
             flex: 1;
+            margin-top: 30px;
         }
 
         .boxz3 img {
@@ -452,49 +471,50 @@
             background-color: white;
             color: black
         }
- .banner {
-    overflow: hidden;
-    position: relative;
-    /* 行块和行快之间有间隙 */
-    font-size: 0;
-    /* 去除间隙 */
-}
 
- .banner .sweeper {
-    width: 2400px;
-    transition: all 0.5s ease;
-}
+        .banner {
+            overflow: hidden;
+            position: relative;
+            /* 行块和行快之间有间隙 */
+            font-size: 0;
+            /* 去除间隙 */
+        }
+
+        .banner .sweeper {
+            width: 2400px;
+            transition: all 0.5s ease;
+        }
 
 
-#brush2:checked~.sweeper {
-    transform: translateX(-1200px);
-}
+        #brush2:checked~.sweeper {
+            transform: translateX(-1200px);
+        }
 
-[type="radio"] {
-    display: none;
-}
+        [type="radio"] {
+            display: none;
+        }
 
-.buttons{
-    position: absolute;
-    z-index: 99;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+        .buttons {
+            position: absolute;
+            z-index: 99;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-label{
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    margin: 0 5px;
-    background-color: #aaa9a9;
-}
+        label {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: #aaa9a9;
+        }
 
-#brush1:checked~.buttons label:nth-child(1),
-#brush2:checked~.buttons label:nth-child(2) {
-    background-color: #fff;
-}
+        #brush1:checked~.buttons label:nth-child(1),
+        #brush2:checked~.buttons label:nth-child(2) {
+            background-color: #fff;
+        }
     </style>
 
 <body>
@@ -523,7 +543,7 @@ label{
                 </div>
             </div>
         </div>
-       <div class="banner">
+        <div class="banner">
             <input type="radio" name="bru" id="brush1" checked>
             <input type="radio" name="bru" id="brush2">
 
@@ -540,100 +560,100 @@ label{
                 </a>
             </div>
         </div>
-    <div class="boxa">
-        <div class="boxa1">
-            <img src="./img/aside-view.jpg" alt="">
-        </div>
-        <div class="boxa2">
-            <h3>集团介绍</h3>
-            <p style="line-height: 2;">
-                创立于1992年的菲姿时尚集团是集研发，生产，品牌管理，服务与一体的大型现代化品牌企业。28年来集团始终坚持国际化的品牌经营理念，现已发展成为现已发展成为一家多品牌、集团化运作的知名时尚品牌企业。1999年集团总部落户上海，占地100多亩，坐拥近万平方现代时尚的办
-                公环境。具有深厚品牌文化理念，自主创新研发设计中心、现代化生产基地、仓储物流、高效运营服务体系融合的时尚服装公司。集团
-                有员工近：000名，菲姿时尚集团实施品牌战略，可持续发展，创新发展之路，不断加大品牌化，品牌集团化"奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。
-                建设力度，为努力实现"集团品牌化，品牌集团化"奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。</p>
-            <div class="boxa3"></div>
-            <div class="boxa4">查看更多</div>
-            <br>
-            <div class="boxb">
-                <div class="boxa5">
-                    <img src="./img/box-p1.jpg" alt="">
-                    <div class="text1">FEIZI</div>
+        <div class="boxa">
+            <div class="boxa1">
+                <img src="./img/aside-view.jpg" alt="">
+            </div>
+            <div class="boxa2">
+                <h3>集团介绍</h3>
+                <p style="line-height: 2;">
+                    创立于1992年的菲姿时尚集团是集研发，生产，品牌管理，服务与一体的大型现代化品牌企业。28年来集团始终坚持国际化的品牌经营理念，现已发展成为现已发展成为一家多品牌、集团化运作的知名时尚品牌企业。1999年集团总部落户上海，占地100多亩，坐拥近万平方现代时尚的办
+                    公环境。具有深厚品牌文化理念，自主创新研发设计中心、现代化生产基地、仓储物流、高效运营服务体系融合的时尚服装公司。集团
+                    有员工近：000名，菲姿时尚集团实施品牌战略，可持续发展，创新发展之路，不断加大品牌化，品牌集团化"奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。
+                    建设力度，为努力实现"集团品牌化，品牌集团化"奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。</p>
+                <div class="boxa3"></div>
+                <div class="boxa4">查看更多</div>
+                <br>
+                <div class="boxb">
+                    <div class="boxa5"><a href=""><img src="./img/box-p1.jpg" alt=""></a>
+
+                        <div class="text1">FEIZI</div>
+                    </div>
+
+                    <div class="boxa6">
+                        <a href=""><img src="./img/box-p2.jpg" alt=""></a>
+                        <div class="text2">LANAFAY</div>
+                    </div>
+
+
                 </div>
 
-                <div class="boxa6">
-                    <img src="./img/box-p2.jpg" alt="">
-                    <div class="text2">LANAFAY</div>
+            </div>
+        </div>
+        <div class="boxz">
+            <div class="boxz1"><a href=""><img src="./img/house.jpg" alt=""></a>
+
+                <h3>发展历程</h3>
+                <h3>
+                    菲姿集团秉承文化与时尚并存，庄重与简约并进，
+                    品质 责任 构建追求卓越敢为人先的企业
+                    饰文化与生活方式。集团公司坚持品质是根本，服务是关键，原积薄发快速发展，历经市场的考验，不断谱写更加辉煌的篇章。</h3>
+                <br>
+                <br>
+                <div> <a style="margin-left: 300px;" href="">查看更多►</a></div>
+            </div>
+            <div class="boxz2">
+                <img src="./img/runner.jpg" alt="">
+                <h3>企业文化</h3>
+                <h3>品质 责任 构建追求卓越敢为人先的企业终旨;合作 尊重营造共赢共享共创的永续经营</h3>
+                <br>
+                <br>
+                <br><br>
+                <div><a style="margin-left: 300px;" href="">查看更多►</a></div>
+            </div>
+            <div class="boxz3">
+                <img src="./img/brand.jpg" alt="">
+                <h3>菲姿2018年度表彰暨"不忘初心，共筑梦想|20."忘初心，共筑梦想，2019我们都是追梦人"上海菲姿有限公司年度晚会于2019年3月29日在［2019]
+                </h3>
+                <div> <a style="margin-left: 300px;" href="">查看更多►</a></div>
+            </div>
+        </div>
+        <div>
+            <div class="boxs">
+                <div class="boxs1">
+                    <h3>关于集团</h3>
+                    <div><a style="color: rgb(174, 172, 172);" href="">集团简介</a></div>
+                    <div><a style="color: rgb(174, 172, 172);" href="">发展历程</a></div>
+                    <div><a style="color: rgb(174, 172, 172);" href="">企业文化</a></div>
+                </div>
+                <div class="boxs2">
+                    <h3>集团资讯</h3>
+                </div>
+                <div class="boxs3">
+                    <h3>旗下品牌</h3>
+                    <div><a style="color: rgb(174, 172, 172);" href="菲姿FEIZI">菲姿FEIZI</a></div>
+                    <div><a style="color: rgb(174, 172, 172);" href="啦娜菲LANAFAY">啦娜菲LANAFAY</a></div>
+                </div>
+                <div class="boxs4">
+                    <h3>人才资讯</h3>
+                    <div><a style="color: rgb(174, 172, 172);" href="">人才政策</a></div>
+                    <div><a style="color: rgb(174, 172, 172);" href="">工作机会</a></div>
+
+                </div>
+                <div class="boxs5">
+                    <h3>联系我们</h3>
+                    <div><a style="color: rgb(174, 172, 172);" href="">TEL : 021-67626666</a></div>
+                    <div><a style="color: rgb(174, 172, 172);" href="">E-MAL :HR@feizi.com</a></div>
+                    <div><a style="color: rgb(174, 172, 172);" href="">FAX :021-67627878</a></div>
+                    <div><a style="color: rgb(174, 172, 172);" href="">总部 ：上海市松江区九亭镇久富开发区盛龙路1号</a></div>
                 </div>
 
 
-            </div>
-
-           </div>
-         </div>
-           <div class="boxz">
-           <div class="boxz1">
-            <img src="./img/house.jpg" alt="">
-            <h3>发展历程</h3>
-            <h3>
-                菲姿集团秉承文化与时尚并存，庄重与简约并进，
-                品质 责任 构建追求卓越敢为人先的企业
-                饰文化与生活方式。集团公司坚持品质是根本，服务是关键，原积薄发快速发展，历经市场的考验，不断谱写更加辉煌的篇章。</h3>
-            <br>
-            <br>
-            <div> <a style="margin-left: 300px;" href="">查看更多►</a></div>
-        </div>
-        <div class="boxz2">
-            <img src="./img/runner.jpg" alt="">
-            <h3>企业文化</h3>
-            <h3>品质 责任 构建追求卓越敢为人先的企业终旨;合作 尊重营造共赢共享共创的永续经营</h3>
-            <br>
-            <br>
-            <br><br>
-            <div><a style="margin-left: 300px;" href="">查看更多►</a></div>
-        </div>
-        <div class="boxz3">
-            <img src="./img/brand.jpg" alt="">
-            <h3>菲姿2018年度表彰暨"不忘初心，共筑梦想|20."忘初心，共筑梦想，2019我们都是追梦人"上海菲姿有限公司年度晚会于2019年3月29日在［2019]
-            </h3>
-            <div> <a style="margin-left: 300px;" href="">查看更多►</a></div>
-        </div>
-    </div>
-    <div>
-        <div class="boxs">
-            <div class="boxs1">
-                <h3>关于集团</h3>
-                <div><a style="color: rgb(174, 172, 172);" href="">集团简介</a></div>
-                <div><a style="color: rgb(174, 172, 172);" href="">发展历程</a></div>
-                <div><a style="color: rgb(174, 172, 172);" href="">企业文化</a></div>
-            </div>
-            <div class="boxs2">
-                <h3>集团资讯</h3>
-            </div>
-            <div class="boxs3">
-                <h3>旗下品牌</h3>
-                <div><a style="color: rgb(174, 172, 172);" href="菲姿FEIZI">菲姿FEIZI</a></div>
-                <div><a style="color: rgb(174, 172, 172);" href="啦娜菲LANAFAY">啦娜菲LANAFAY</a></div>
-            </div>
-            <div class="boxs4">
-                <h3>人才资讯</h3>
-                <div><a style="color: rgb(174, 172, 172);" href="">人才政策</a></div>
-                <div><a style="color: rgb(174, 172, 172);" href="">工作机会</a></div>
 
             </div>
-            <div class="boxs5">
-                <h3>联系我们</h3>
-                <div><a style="color: rgb(174, 172, 172);" href="">TEL : 021-67626666</a></div>
-                <div><a style="color: rgb(174, 172, 172);" href="">E-MAL :HR@feizi.com</a></div>
-                <div><a style="color: rgb(174, 172, 172);" href="">FAX :021-67627878</a></div>
-                <div><a style="color: rgb(174, 172, 172);" href="">总部 ：上海市松江区九亭镇久富开发区盛龙路1号</a></div>
-            </div>
-
 
 
         </div>
-
-
-    </div>
     </div>
 </body>
 
