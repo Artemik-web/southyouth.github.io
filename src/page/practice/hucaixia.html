@@ -5,485 +5,655 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
 
 
-<style>
-    a {
-        color: black;
-        text-decoration: none;
-    }
 
-    .box {
-        width: 100%;
-        height: 50px;
-        background-color: white;
-        display: flex;
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
 
-        top: 0;
 
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .box1 {
-        width: 90px;
-        height: 40px;
-        background-color: white;
-        margin-left: 68%;
-    }
+        a {
+            color: black;
+            text-decoration: none;
+        }
 
-    .box6 {
-        width: 130px;
-        height: 100px;
-        background-color: darkgray;
-        display: none;
-        margin-top: 20px;
-        position: relative;
-    }
+        .bp {
+            margin: 0 auto;
+            width: 1200px;
+        }
 
-    .box1:hover {
+        .box {
+            width: 1200px;
+            background-color: white;
+            display: flex;
+
+        }
+
+        .box1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            margin-left: 60%;
+            width: 100px;
+
+        }
+
+        .box6 a {
+            color: #999;
+
+        }
+
+        .box6 a:hover {
+            color: #000;
+
+        }
 
         .box6 {
-            display: block;
-            background-color: darkgray;
+            position: absolute;
+            top: 100px;
+            background-color: #EBEBEB;
+            width: 182px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 99999;
+
+
         }
 
-        background-color: darkgray;
+        .box6 div {
+            width: 142px;
+            margin: 0 auto;
+            border-bottom: 1px solid #ffffff;
 
-    }
+        }
 
-    .box2 {
-        width: 90px;
-        height: 40px;
-        background-color: white;
-    }
+        .box7 div {
+            width: 142px;
+            margin: 0 auto;
+            border-bottom: 1px solid #ffffff;
+        }
 
-    .box2:hover {
-        background-color: darkgray;
-    }
+        .box8 div {
+            width: 142px;
+            margin: 0 auto;
+            border-bottom: 1px solid #ffffff;
+        }
 
-    .box3 {
-        width: 90px;
-        height: 40px;
-        background-color: white;
-    }
+        .box1:hover {
+            .box6 {
+                opacity: 1;
+                top: 70px;
+            }
 
-    .box7 {
-        width: 130px;
-        height: 100px;
-        background-color: darkgray;
-        display: none;
-        margin-top: 20px;
-        position: relative;
-    }
+            background-color: #EBEBEB;
 
+        }
 
-    .box3:hover {
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        .box2:hover {
+            background-color: #EBEBEB;
+        }
+
+        .box3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            margin-left: 20px;
+        }
+
         .box7 {
-            display: block;
-            background-color: darkgray;
+            position: absolute;
+            top: 100px;
+            background-color: #EBEBEB;
+            width: 182px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 99999;
         }
 
-        background-color: darkgray;
-    }
 
-    .box8 {
-        width: 130px;
-        height: 100px;
-        background-color: darkgray;
-        display: none;
-        position: relative;
-        margin-top: 20px;
-    }
+        .box3:hover {
+            .box7 {
+                opacity: 1;
+                top: 70px;
+            }
 
-    .box4 {
-        width: 90px;
-        height: 40px;
-        background-color: white;
-    }
+            background-color: #EBEBEB;
+        }
 
-    .box4:hover {
-        background-color: darkgray;
+        .box7 a {
+            color: #999;
+        }
+
+        .box7 a:hover {
+            color: #000;
+        }
+
+        .box8 a {
+            color: #999;
+        }
+
+        .box8 a:hover {
+            color: #000;
+        }
 
         .box8 {
-            display: block;
-            background-color: darkgray;
+
+            position: absolute;
+            top: 100px;
+            background-color: #EBEBEB;
+            width: 182px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 99999;
         }
 
-    }
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
 
-    .box5 {
-        width: 200px;
-        height: 40px;
-        background-color: white;
+        }
 
-    }
+        .box4:hover {
+            background-color: #EBEBEB;
+
+            .box8 {
+                opacity: 1;
+                top: 70px;
+            }
+
+        }
+
+        .box5 {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+
+        }
 
 
-    .boxa {
-        width: 100%;
-        height: 600px;
-        background-color: white;
-        display: flex;
-    }
+        .boxa {
+            margin-top: 52px;
+            height: 600px;
+            background-color: white;
+            display: flex;
+            overflow: hidden;
+        }
 
-    .boxa1 {
-        height: 600px;
-        background-color: white;
-    }
-   
-.boxa1 img{height: 600px;}
-    .boxa2 {
-        height: 400px;
-        background-color: white;
-        margin-left: 20px;
-        width: 875px;
-    }
-    .boxa3 {
-        width: 100px;
-        height: 40px;
-        background-color: rgb(15, 14, 14);
-        margin-left: 870px;
-    }
+        .boxa1 {
+            height: 600px;
+            background-color: white;
+            transform: translateX(-410px);
+            animation: run 0.5s ease forwards
+        }
 
-    .boxa3:hover {
-        background-color: darkgray;
-        cursor: pointer;
-    }
+        .boxa1 img {
+            height: 600px;
+        }
 
-    .boxa4 {
-        width: 100px;
-        height: 40px;
-        background-color: rgb(15, 14, 14);
-        margin-left: 970px;
-        color: white;
-        text-align: center;
-        line-height: 40px;
-        margin-top: -20px;
-    }
+        .boxa2 {
+            height: 400px;
+            background-color: white;
+            margin-left: 20px;
+            width: 780px;
+            transform: translateX(810px);
+            animation: run 0.5s ease forwards;
+        }
 
-    .boxa4:hover {
-        background-color: darkgray;
-        cursor: pointer;
-    }
+        @keyframes run {
+            100% {
+                transform: translateX(0);
+            }
+        }
 
-    .boxb {
-        height: 400px;
-        background-color: white;
-        display: flex;
+        .boxa3 {
+            width: 100px;
+            height: 40px;
+            background-color: #555;
+            margin-left: 590px;
+
+        }
+
+        .boxa3:hover {
+            background-color: #777;
+            cursor: pointer;
+        }
+
+        .boxa4 {
+            width: 100px;
+            height: 40px;
+            background-color: #555;
+            margin-left: 680px;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            margin-top: -20px;
+        }
+
+        .boxa4:hover {
+            background-color: darkgray;
+            cursor: pointer;
+        }
+
+        .boxb {
+            height: 400px;
+            background-color: white;
+            display: flex;
+
+
+        }
+
+        .boxa5 {
+            height: 240px;
+            background-color: white;
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            margin-top: 30px;
+            margin-left: 40px;
+        }
+
+        .boxa5 img {
+            width: 400px;
+            transition: 0.3s ease;
+        }
+
+        .text1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)scale(1);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translate(-50%, -50%)scale(1.5);
+            transition: all 0.3s ease cubic-bezier(0.175, 0.885, 0.42, 0.131);
+            padding: 20px;
+            border: 3px solid white;
+            z-index: 10;
+            display: inline-block;
+            min-width: 220px;
+            text-align: center;
+        }
+
+        .boxa5:hover .text1 {
+            opacity: 1;
+            transform: translate(-50%, -50%)scale(1);
+        }
+
+        .boxa5:hover img {
+            filter: brightness(0.6)
+        }
+
+        .boxa6 {
+            margin-left: 50px;
+            height: 240px;
+            background-color: white;
+            float: right;
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            margin-top: 30px;
+
+        }
+
+        .boxa6 img {
+            transition: 0.3s ease;
+        }
+
+        .boxz {
+            width: 100%;
+            height: 700px;
+            background-color: white;
+            display: flex;
+
+            gap: 20px;
+        }
+
+        .text2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)scale(1);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translate(-50%, -50%)scale(1.5);
+            transition: all 0.3s ease cubic-bezier(0.175, 0.885, 0.42, 0.131);
+            padding: 20px;
+            border: 3px solid white;
+            z-index: 10;
+            display: inline-block;
+            min-width: 220px;
+            text-align: center;
+        }
+
+        .boxa6:hover .text2 {
+            opacity: 1;
+            transform: translate(-50%, -50%)scale(1);
+        }
+
+        .boxa6:hover img {
+            filter: brightness(0.6)
+        }
+
+        .boxz1 {
+           width: 400px;
+            height: 600px;
+            background-color: aliceblue;
+            margin-top: 80px;
+            flex: 1;
+        }
+
+        .boxz1 img {
+           
+  transition: transform 2s ease;
+        }
         
+            
+    
+         .boxz1:hover img {
+            transform: scale(1.03);
+            opacity: 0.9;
+            z-index: 10;
+        } 
+        .boxz2 {
+            width: 400px;
+            height: 600px;
+            background-color: aliceblue;
+            margin-top: 80px;
+            flex: 1;
+        }
 
-    }
+        .boxz2 img {
+            transition: transform 2s ease;
+        }
 
-    .boxa5 {
-        height: 240px;
-        background-color: white;
-        flex: 1;
-        position: relative;
-        overflow: hidden;
-    }
-.boxa5 img{
-    width: 400px;transition:0.3s ease;
-}
-.text1{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-   transform: translate(-50%, -50%)scale(1);
-color: white;
-font-size: 18px;
-   font-weight: bold;
-   align-items: center;
-   justify-content: center;
-   opacity: 0;
-   transition: opacity 0.3s ease, transform 0.3s ease;
-   transform:translate(-50%,-50%)scale(1.5);
-   transition: all 0.3s ease cubic-bezier(0.175,0.885,0.42,0.131);
-   padding: 20px;
-   border: 4px solid white;
-   z-index: 10;
-   display: inline-block;
-   min-width: 120px;
-   text-align: center;
-}
-.boxa5:hover .text1{
-    opacity: 1;
-    transform: translate(-50%, -50%)scale(1.1);
-}
-.boxa5:hover img{
-    filter:brightness(0.6)
-}
-    .boxa6 {
-        margin-left: 50px;
-        height: 240px;
-        background-color: white;
-        float: right;
-        flex: 1;
-         position: relative;
-        overflow: hidden;
+        .boxz2:hover img {
+            transform: scale(1.03);
+            opacity: 0.9;
+        }
 
-    }
-.boxa6 img{
-    width: 400px;transition:0.3s ease;
-}
-    .boxz {
-        width: 100%;
-        height: 700px;
-        background-color: white;
-        display: flex;
+        .boxz3 {
+            width: 400px;
+            height: 650px;
+            background-color: aliceblue;
+            flex: 1;
+            margin-top: 30px;
+        }
 
-        gap: 20px;
-    }
-.text2{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-   transform: translate(-50%, -50%)scale(1);
-color: white;
-font-size: 18px;
-   font-weight: bold;
-   align-items: center;
-   justify-content: center;
-   opacity: 0;
-   transition: opacity 0.3s ease, transform 0.3s ease;
-   transform:translate(-50%,-50%)scale(1.5);
-   transition: all 0.3s ease cubic-bezier(0.175,0.885,0.42,0.131);
-   padding: 20px;
-   border: 4px solid white;
-   z-index: 10;
-   display: inline-block;
-   min-width: 120px;
-   text-align: center;
-}
-.boxa6:hover .text2{
-    opacity: 1;
-    transform: translate(-50%, -50%)scale(1.1);
-}
-.boxa6:hover img{
-    filter:brightness(0.6)
-}
+        .boxz3 img {
+            transition: transform 2s ease;
+        }
 
-    .boxz1 {
-        width: 400px;
-        height: 600px;
-        background-color: aliceblue;
-        margin-top: 50px;
-        flex: 1;
-    }
+        .boxz3:hover img {
+            transform: scale(1.03);
+            opacity: 0.9;
+        }
 
-    .boxz1 img {
-        width: 100%;
-        transition: transform 2s ease;
-    }
+        .boxs {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            background-color: white;
+            justify-content: space-around;
+            border-top: 1px solid #ccc;
+        }
 
-    .boxz1:hover img {
-        transform: scale(1.03);
-        opacity: 0.9;
-    }
+        .boxs1 {
+            width: 100px;
+            height: 300px;
+            background-color: white;
+            color: black
+        }
 
-    .boxz2 {
-        width: 400px;
-        height: 600px;
-        background-color: aliceblue;
-        margin-top: 50px;
-        flex: 1;
-    }
+        .boxs2 {
+            width: 100px;
+            height: 300px;
+            background-color: white;
+            color: black
+        }
 
-    .boxz2 img {
-        width: 100%;
-        transition: transform 2s ease;
-    }
+        .boxs3 {
+            width: 100px;
+            height: 300px;
+            background-color: white;
+            color: black
+        }
 
-    .boxz2:hover img {
-        transform: scale(1.03);
-        opacity: 0.9;
-    }
+        .boxs4 {
+            width: 100px;
+            height: 300px;
+            background-color: white;
+            color: black;
+            border-right: 1px dashed #ccc;
+        }
 
-    .boxz3 {
-        width: 400px;
-        height: 650px;
-        background-color: aliceblue;
-        flex: 1;
-    }
+        .boxs5 {
+            width: 400px;
+            height: 300px;
+            background-color: white;
+            color: black
+        }
 
-    .boxz3 img {
-        width: 100%;
-        transition: transform 2s ease;
-    }
+        .banner {
+            overflow: hidden;
+            position: relative;
+            /* 行块和行快之间有间隙 */
+            font-size: 0;
+            /* 去除间隙 */
+        }
 
-    .boxz3:hover img {
-        transform: scale(1.03);
-        opacity: 0.9;
-    }
+        .banner .sweeper {
+            width: 2400px;
+            transition: all 0.5s ease;
+        }
 
-    .boxs {
-        width: 100%;
-        height: 300px;
-        display: flex;
-        background-color: white;
-        justify-content: space-around;
-        border-top: 1px solid #ccc;
-    }
 
-    .boxs1 {
-        width: 100px;
-        height: 300px;
-        background-color: white;
-        color: black
+        #brush2:checked~.sweeper {
+            transform: translateX(-1200px);
+        }
 
-    }
+        [type="radio"] {
+            display: none;
+        }
 
-    .boxs2 {
-        width: 100px;
-        height: 300px;
-        background-color: white;
-        color: black
-    }
+        .buttons {
+            position: absolute;
+            z-index: 99;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-    .boxs3 {
-        width: 100px;
-        height: 300px;
-        background-color: white;
-        color: black
-    }
+        label {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: #aaa9a9;
+        }
 
-    .boxs4 {
-        width: 100px;
-        height: 300px;
-        background-color: white;
-        color: black;
-        border-right: 1px dashed #ccc;
-    }
-
-    .boxs5 {
-        width: 400px;
-        height: 300px;
-        background-color: white;
-        color: black
-    }
-</style>
+        #brush1:checked~.buttons label:nth-child(1),
+        #brush2:checked~.buttons label:nth-child(2) {
+            background-color: #fff;
+        }
+    </style>
 
 <body>
+    <div class="bp">
+        <div class="box">
+            <div class="box5"><a href=""><img src="./img/logo.png" alt=""></a></div>
+            <div class="box1"> <b><a href="">关于集团</a></b>
+                <div class="box6">
+                    <div><a href="">集团简介</a></div>
+                    <div><a href="">发展历程</a></div>
+                    <div><a href="">企业文化</a></div>
+                </div>
+            </div>
+            <div class="box2"><b> <a href="">集团资讯</a></b></div>
+            <div class="box3"><b><a href="">旗下品牌</a></b>
+                <div class="box7">
+                    <div><a href="">菲姿FEIZI</a></div>
+                    <div><a href="">啦娜菲LANAFAY</a></div>
 
-    <div class="box">
-        <div class="box5"><a href=""><b style="font-size:25px;"> 菲姿时尚集团 </b></a></div>
-        <div class="box1"> <b><a href="">关于集团</a></b>
-            <div class="box6">
-                <div>集团简介</div>
-                <div>发展历程</div>
-                <div>企业文化</div>
+                </div>
+            </div>
+            <div class="box4"><b><a href="">人才资讯</a></b>
+                <div class="box8">
+                    <div><a href="">人才政策</a></div>
+                    <div><a href="">工作机会</a></div>
+                </div>
             </div>
         </div>
-        <div class="box2"><b> <a href="">集团资讯</a></b></div>
-        <div class="box3"><b><a href="">旗下品牌</a></b>
-            <div class="box7">
-                <div style="  border-bottom: 1px solid white;">菲姿FEIZI</div>
-                <div>啦娜菲LANAFAY</div>
+        <div class="banner">
+            <input type="radio" name="bru" id="brush1" checked>
+            <input type="radio" name="bru" id="brush2">
 
+            <div class="buttons">
+                <label for="brush1"></label>
+                <label for="brush2"></label>
+            </div>
+            <div class="sweeper">
+                <a href="">
+                    <img src="./img/brush1.jpg" alt="轮播图1">
+                </a>
+                <a href="">
+                    <img src="./img/brush2.jpg" alt="轮播图1">
+                </a>
             </div>
         </div>
-        <div class="box4"><b><a href="">人才资讯</a></b>
-            <div class="box8">
-                <div>人才政策</div>
-                <div>工作机会</div>
+        <div class="boxa">
+            <div class="boxa1">
+                <img src="./img/aside-view.jpg" alt="">
             </div>
-        </div>
-    </div>
-    <div><img style="width: 100%;" src="./img/brush2.jpg" alt=""></div>
-    <br>
-    <div class="boxa">
-        <div class="boxa1">
-            <img src="./img/aside-view.jpg" alt="">
-        </div>
+            <div class="boxa2">
+                <h3>集团介绍</h3>
+                <p style="line-height: 2;">
+                    创立于1992年的菲姿时尚集团是集研发，生产，品牌管理，服务与一体的大型现代化品牌企业。28年来集团始终坚持国际化的品牌经营理念，现已发展成为现已发展成为一家多品牌、集团化运作的知名时尚品牌企业。1999年集团总部落户上海，占地100多亩，坐拥近万平方现代时尚的办
+                    公环境。具有深厚品牌文化理念，自主创新研发设计中心、现代化生产基地、仓储物流、高效运营服务体系融合的时尚服装公司。集团
+                    有员工近：000名，菲姿时尚集团实施品牌战略，可持续发展，创新发展之路，不断加大品牌化，品牌集团化"奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。
+                    建设力度，为努力实现"集团品牌化，品牌集团化"奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。</p>
+                <div class="boxa3"></div>
+                <div class="boxa4">查看更多</div>
+                <br>
+                <div class="boxb">
+                    <div class="boxa5"><a href=""><img src="./img/box-p1.jpg" alt=""></a>
 
-        <div class="boxa2">
-            <h3>集团介绍</h3>
-            <p style="line-height: 2;">
-                创立于1992年的菲姿时尚集团是集研发，生产，品牌管理，服务与一体的大型现代化品牌企业。28年来集团始终坚持国际化的品牌经营理念，现已发展成为现已发展成为一家多品牌、集团化运作的知名时尚品牌企业。1999年集团总部落户上海，占地100多亩，坐拥近万平方现代时尚的办
-                公环境。具有深厚品牌文化理念，自主创新研发设计中心、现代化生产基地、仓储物流、高效运营服务体系融合的时尚服装公司。集团
-                有员工近：000名，菲姿时尚集团实施品牌战略，可持续发展，创新发展之路，不断加大品牌化，品牌集团化"奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。
-                建设力度，为努力实现"集团品牌化，品牌集团化"奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。</p>
-            <div class="boxa3"></div>
-            <div class="boxa4">查看更多</div>
-            <br>
-            <div class="boxb">
-                <div class="boxa5">
-                    <img src="./img/box-p1.jpg" alt="">
-                    <div class="text1">FEIZI</div>
+                        <div class="text1">FEIZI</div>
+                    </div>
+
+                    <div class="boxa6">
+                        <a href=""><img src="./img/box-p2.jpg" alt=""></a>
+                        <div class="text2">LANAFAY</div>
+                    </div>
+
+
                 </div>
 
-                <div class="boxa6">
-                    <img src="./img/box-p2.jpg" alt="">
-                    <div class="text2">LANAFAY</div>
+            </div>
+        </div>
+        <div class="boxz">
+            <div class="boxz1"><a href=""><img src="./img/house.jpg" alt=""></a>
+
+                <h3>发展历程</h3>
+                <h3>
+                    菲姿集团秉承文化与时尚并存，庄重与简约并进，
+                    品质 责任 构建追求卓越敢为人先的企业
+                    饰文化与生活方式。集团公司坚持品质是根本，服务是关键，原积薄发快速发展，历经市场的考验，不断谱写更加辉煌的篇章。</h3>
+                <br>
+                <br>
+                <div> <a style="margin-left: 300px;" href="">查看更多►</a></div>
+            </div>
+            <div class="boxz2">
+                <img src="./img/runner.jpg" alt="">
+                <h3>企业文化</h3>
+                <h3>品质 责任 构建追求卓越敢为人先的企业终旨;合作 尊重营造共赢共享共创的永续经营</h3>
+                <br>
+                <br>
+                <br><br>
+                <div><a style="margin-left: 300px;" href="">查看更多►</a></div>
+            </div>
+            <div class="boxz3">
+                <img src="./img/brand.jpg" alt="">
+                <h3>菲姿2018年度表彰暨"不忘初心，共筑梦想|20."忘初心，共筑梦想，2019我们都是追梦人"上海菲姿有限公司年度晚会于2019年3月29日在［2019]
+                </h3>
+                <div> <a style="margin-left: 300px;" href="">查看更多►</a></div>
+            </div>
+        </div>
+        <div>
+            <div class="boxs">
+                <div class="boxs1">
+                    <h3>关于集团</h3>
+                    <div><a style="color: rgb(174, 172, 172);" href="">集团简介</a></div>
+                    <div><a style="color: rgb(174, 172, 172);" href="">发展历程</a></div>
+                    <div><a style="color: rgb(174, 172, 172);" href="">企业文化</a></div>
+                </div>
+                <div class="boxs2">
+                    <h3>集团资讯</h3>
+                </div>
+                <div class="boxs3">
+                    <h3>旗下品牌</h3>
+                    <div><a style="color: rgb(174, 172, 172);" href="菲姿FEIZI">菲姿FEIZI</a></div>
+                    <div><a style="color: rgb(174, 172, 172);" href="啦娜菲LANAFAY">啦娜菲LANAFAY</a></div>
+                </div>
+                <div class="boxs4">
+                    <h3>人才资讯</h3>
+                    <div><a style="color: rgb(174, 172, 172);" href="">人才政策</a></div>
+                    <div><a style="color: rgb(174, 172, 172);" href="">工作机会</a></div>
+
+                </div>
+                <div class="boxs5">
+                    <h3>联系我们</h3>
+                    <div><a style="color: rgb(174, 172, 172);" href="">TEL : 021-67626666</a></div>
+                    <div><a style="color: rgb(174, 172, 172);" href="">E-MAL :HR@feizi.com</a></div>
+                    <div><a style="color: rgb(174, 172, 172);" href="">FAX :021-67627878</a></div>
+                    <div><a style="color: rgb(174, 172, 172);" href="">总部 ：上海市松江区九亭镇久富开发区盛龙路1号</a></div>
                 </div>
 
 
-            </div>
-
-        </div>
-    </div>
-    <div class="boxz">
-        <div class="boxz1">
-            <img src="./img/house.jpg" alt="">
-            <h3>发展历程</h3>
-            <h3>>
-                菲姿集团秉承文化与时尚并存，庄重与简约并进，
-                品质 责任 构建追求卓越敢为人先的企业
-                饰文化与生活方式。集团公司坚持品质是根本，服务是关键，原积薄发快速发展，历经市场的考验，不断谱写更加辉煌的篇章。</h3>
-            <br>
-            <br>
-            <div> <a style="margin-left: 380px;" href="">查看更多►</a></div>
-        </div>
-        <div class="boxz2">
-            <img src="./img/runner.jpg" alt="">
-            <h3>企业文化</h3>
-            <h3>>品质 责任 构建追求卓越敢为人先的企业终旨;合作 尊重营造共赢共享共创的永续经营</h3>
-            <br>
-            <br>
-            <br><br>
-            <div><a style="margin-left: 380px;" href="">查看更多►</a></div>
-        </div>
-        <div class="boxz3">
-            <img src="./img/brand.jpg" alt="">
-            <h3>菲姿2018年度表彰暨"不忘初心，共筑梦想|20."忘初心，共筑梦想，2019我们都是追梦人"上海菲姿有限公司年度晚会于2019年3月29日在［2019]
-            </h3>
-            <div> <a style="margin-left: 380px;" href="">查看更多►</a></div>
-        </div>
-    </div>
-    <div>
-        <div class="boxs">
-            <div class="boxs1">
-                <h3>关于集团</h3>
-                <div><a style="color: rgb(174, 172, 172);" href="">集团简介</a></div>
-                <div><a style="color: rgb(174, 172, 172);" href="">发展历程</a></div>
-                <div><a style="color: rgb(174, 172, 172);" href="">企业文化</a></div>
-            </div>
-            <div class="boxs2">
-                <h3>集团资讯</h3>
-            </div>
-            <div class="boxs3">
-                <h3>旗下品牌</h3>
-                <div><a style="color: rgb(174, 172, 172);" href="菲姿FEIZI">菲姿FEIZI</a></div>
-                <div><a style="color: rgb(174, 172, 172);" href="啦娜菲LANAFAY">啦娜菲LANAFAY</a></div>
-            </div>
-            <div class="boxs4">
-                <h3>人才资讯</h3>
-                <div><a style="color: rgb(174, 172, 172);" href="">人才政策</a></div>
-                <div><a style="color: rgb(174, 172, 172);" href="">工作机会</a></div>
 
             </div>
-            <div class="boxs5">
-                <h3>联系我们</h3>
-                <div><a style="color: rgb(174, 172, 172);" href="">TEL : 021-67626666</a></div>
-                <div><a style="color: rgb(174, 172, 172);" href="">E-MAL :HR@feizi.com</a></div>
-                <div><a style="color: rgb(174, 172, 172);" href="">FAX :021-67627878</a></div>
-                <div><a style="color: rgb(174, 172, 172);" href="">总部 ：上海市松江区九亭镇久富开发区盛龙路1号</a></div>
-            </div>
-
 
 
         </div>
-
-
     </div>
 </body>
 
