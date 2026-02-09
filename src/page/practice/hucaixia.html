@@ -46,7 +46,8 @@
             background-color: white;
             margin-left: 60%;
             width: 100px;
-
+            height: 30px;
+            margin-top: 35px;
         }
 
         .box6 a {
@@ -93,7 +94,7 @@
         .box1:hover {
             .box6 {
                 opacity: 1;
-                top: 70px;
+                top: 65px;
             }
 
             background-color: #EBEBEB;
@@ -108,6 +109,8 @@
             justify-content: center;
             align-items: center;
             margin-left: 20px;
+            height: 30px;
+            margin-top: 35px;
         }
 
         .box2:hover {
@@ -122,6 +125,8 @@
             height: 100px;
             background-color: white;
             margin-left: 20px;
+            height: 30px;
+            margin-top: 35px;
         }
 
         .box7 {
@@ -138,7 +143,7 @@
         .box3:hover {
             .box7 {
                 opacity: 1;
-                top: 70px;
+                top: 65px;
             }
 
             background-color: #EBEBEB;
@@ -179,6 +184,8 @@
             justify-content: center;
             align-items: center;
             margin-left: 20px;
+            height: 30px;
+            margin-top: 35px;
 
         }
 
@@ -187,7 +194,7 @@
 
             .box8 {
                 opacity: 1;
-                top: 70px;
+                top: 65px;
             }
 
         }
@@ -335,7 +342,7 @@
 
         .boxz {
             width: 100%;
-            height: 700px;
+            height: 650px;
             background-color: white;
             display: flex;
 
@@ -380,6 +387,10 @@
             margin-top: 80px;
             flex: 1;
             position: relative;
+              transform: translateX(-500px)rotateY(-180deg);
+         
+            animation: ZX 0.5s ease forwards;
+            
         }
 
         .boxz1 a {
@@ -390,13 +401,6 @@
             
         }
 
-        .boxz1 img {
-
-            transform: translateX(-500px)rotateY(-180deg);
-         
-            animation: ZX 0.5s ease forwards;
-        }
-
         @keyframes ZX {
             100% {
                 transform: translateX(0);
@@ -405,7 +409,7 @@
         }
 
         .boxz1:hover img {
-            transform: scale(1.5);
+            transform: scale(1.03);
             transition: transform 2s ease;
             opacity: 0.9;
         }
@@ -416,6 +420,9 @@
             background-color: #EBEBEB;
             margin-top: 80px;
             flex: 1;
+            transform: translateX(-500px)rotateY(-180deg);
+            
+            animation: ZX 0.5s ease forwards;
         }
 
         .boxz2 a {
@@ -425,13 +432,7 @@
             margin-top: 140px;
         }
 
-        .boxz2 img {
-            transition: transform 2s ease;
-
-            transform: translateX(-500px)rotateY(-180deg);
-            ;
-            animation: ZX 0.5s ease forwards;
-        }
+        
 
         .boxz2:hover img {
             transform: scale(1.03);
@@ -444,16 +445,12 @@
             background-color: #EBEBEB;
             flex: 1;
             margin-top: 30px;
-        }
-
-        .boxz3 img {
-            transition: transform 2s ease;
-
-            transform: translateX(-500px)rotateY(-180deg);
-            ;
+              transform: translateX(-500px)rotateY(-180deg);
+            
             animation: ZX 0.5s ease forwards;
         }
 
+        
         .boxz3:hover img {
             transform: scale(1.03);
             opacity: 0.9;
@@ -643,7 +640,10 @@
                 <div> <a href="">查看更多►</a></div>
             </div>
             <div class="boxz2">
-                <img src="./img/runner.jpg" alt="">
+                
+<img src="./img/runner.jpg" alt="">
+                
+                
                 <h3>企业文化</h3>
                 <h3>品质 责任 构建追求卓越敢为人先的企业终旨;合作 尊重营造共赢共享共创的永续经营</h3>
                 <div><a href="">查看更多►</a></div>
