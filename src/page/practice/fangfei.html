@@ -8,35 +8,45 @@
     <style>
         .box1 {
             display: flex;
-            
             margin-top: 20px;
             margin-left: 150px;
             width: 1200px;
             font-weight: bold;
             font-size: 50px;
             position: relative;
-            cursor: pointer;
+        }
+
+        .nav-item {
+            border-bottom: 1px solid #ffffff;
+            padding-bottom: 4px;
+            margin-left: 10%;
+            margin-right: 10%;
         }
 
         .box21 {
-            margin-top: 20px;
+            margin-top: 35px;
             margin-left: 500px;
             font-weight: bold;
             font-size: 20px;
+            cursor: pointer;
         }
 
         .box21:hover {
-            background-color: rgb(218, 218, 241);
+            background-color: #EBEBEB;
         }
 
         .box22 {
             position: absolute;
             width: 120px;
             height: 100px;
-            font-size: 20px;
             display: none;
             z-index: 10;
-            background-color: rgb(218, 218, 241);
+            background-color: #EBEBEB;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 30px;
+            text-align: center;
+            color: #999;
         }
 
         .box21:hover .box22 {
@@ -44,35 +54,42 @@
         }
 
         .box31 {
-            margin-top: 20px;
+            margin-top: 35px;
             margin-left: 25px;
+            height: 40px;
             font-weight: bold;
             font-size: 20px;
+            cursor: pointer;
         }
 
         .box31:hover {
-            background-color: rgb(218, 218, 241);
+            background-color: #EBEBEB;
         }
 
         .box41 {
-            margin-top: 20px;
+            margin-top: 35px;
             margin-left: 25px;
             font-weight: bold;
             font-size: 20px;
+            cursor: pointer;
         }
 
         .box41:hover {
-            background-color: rgb(218, 218, 241);
+            background-color: #EBEBEB;
         }
 
         .box42 {
             position: absolute;
             width: 120px;
-            height: 60px;
-            font-size: 17px;
+            height: 75px;
             display: none;
             z-index: 10;
-            background-color: rgb(218, 218, 241);
+            background-color: #EBEBEB;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 30px;
+            text-align: center;
+            color: #999;
         }
 
         .box41:hover .box42 {
@@ -81,51 +98,98 @@
 
         .box51 {
             position: relative;
-            margin-top: 20px;
+            margin-top: 35px;
             margin-left: 25px;
             font-weight: bold;
             font-size: 20px;
             z-index: 1;
+            cursor: pointer;
         }
 
         .box51:hover {
-            background-color: rgb(218, 218, 241);
+            background-color: #EBEBEB;
         }
 
         .box52 {
             position: absolute;
             width: 120px;
-            height: 60px;
-            font-size: 17px;
+            height: 75px;
+            font-size: 14px;
+            line-height: 30px;
+            text-align: center;
             display: none;
             z-index: 10;
-            background-color: rgb(218, 218, 241);
+            color: #999;
+            background-color: #EBEBEB;
         }
 
         .box51:hover .box52 {
             display: block;
         }
 
-
-        .box4 {
-            position: absolute;
-            margin-top: 100px;
-            width: 100%;
+        .add .box4 {
+            position: relative;
+            overflow: hidden;
+            font-size: 0;
+            /* 去间隙，让两张图片占一行，因为img是行块，不独占一行 有间隙*/
             height: auto;
+            width: 1200px;
+            height: 600px;
+            margin-left: 150px;
+            margin-bottom: 20px;
+        }
+
+        .add .box4 .sweeper {
+            width: 2400px;
+            transform: all 0.5s ease;
+            display: flex;
+        }
+
+        #brush2:checked~.sweeper {
+            transform: translateX(-1200px);
+        }
+
+        [type="radio"] {
+
+            display: none;
+        }
+
+        .buttons {
+            position: absolute;
+            z-index: 99;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        label {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: #aaa9a9;
+        }
+
+        label:focus {
+            background-color: #fff;
+        }
+
+        #brush1:checked~.buttons label:nth-child(1),
+        #brush2:checked~.buttons label:nth-child(2) {
+            background-color: #fff;
         }
 
         .box5 {
             position: relative;
-            margin-top: 700px;
             margin-left: 150px;
-            /* display: block; */
             width: 1200px;
         }
 
         .boxk1 {
             position: absolute;
-            margin-left: 950px;
-            margin-top: -330px;
+            margin-left: 948px;
+            margin-top: -80px;
             width: 90px;
             height: 30px;
             background-color: rgb(78, 81, 83);
@@ -153,20 +217,18 @@
         .box6 {
             position: absolute;
             margin-left: 400px;
-            margin-top: -530px;
+            margin-top: -290px;
             font-size: 25px;
             font-weight: bold;
             cursor: default;
-
         }
 
         .box7 {
             position: absolute;
             margin-left: 400px;
-            margin-top: -470px;
+            margin-top: -280px;
             font-size: 15px;
             cursor: default;
-
         }
 
         .box8 {
@@ -174,8 +236,8 @@
             justify-content: center;
             align-items: center;
             position: absolute;
+            font-size: 50px;
             margin-left: 403px;
-            margin-top: -245px;
             cursor: pointer;
             z-index: 10;
             height: 240px;
@@ -184,57 +246,60 @@
 
         .box8:hover {
             background-color: rgba(100, 87, 71, 0.304);
-
         }
 
         .boxb {
             color: aliceblue;
-
-            display: none;
+            opacity: 0;
+            transition: all 0.3s ease;
         }
 
         .box8:hover .boxb {
             display: block;
             position: absolute;
-            width: 100px;
-            height: 30px;
+            width: 380px;
+            height: 150px;
             border: 5px solid white;
-            display: none;
+            transform: scale(0.3);
+            opacity: 1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
+        .boxb2 {
+            top: 50px;
+            color: aliceblue;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
 
         .box81 {
-            position: absolute;
+            position: relative;
             margin-left: 806px;
             margin-top: -245px;
             cursor: pointer;
             z-index: 1;
             height: 240px;
             width: 381px;
+            font-size: 50px;
         }
 
         .box81:hover {
-
             background-color: rgba(100, 87, 71, 0.304);
         }
 
-        .box81:hover .boxb {
-            display: block;
+        .box81:hover .boxb2 {
             position: absolute;
-            width: 100px;
-            height: 30px;
-            margin-top: 110px;
-            margin-left: 130px;
+            width: 380px;
+            height: 150px;
             border: 5px solid white;
-            display: none;
+            transform: scale(0.3);
+            opacity: 1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-
 
         .box9 {
             position: relative;
@@ -242,44 +307,8 @@
             margin-left: 150px;
             display: block;
             width: 1200px;
-            overflow: hidden;
             transition: all 0.2s ease;
-        }
-
-        .box9 img {
-            transition: transform 0.2s ease;
-            width: 380px;
-        }
-
-        .box9:hover img {
-            transform: scale(1.009);
-
-        }
-
-        .box10 {
-            position: absolute;
-            width: 380px;
-            height: 200px;
-            background-color: rgb(241, 237, 225);
-            margin-top: -7px;
-            margin-left: 150px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .box11 {
-            position: absolute;
-            font-size: 20px;
-            font-weight: bold;
-            left: 20px;
             z-index: 10;
-
-        }
-
-        .box12 {
-            position: absolute;
-            top: 450px;
-            left: 20px;
         }
 
         .box13 {
@@ -292,7 +321,7 @@
         .box14 {
             display: flex;
             width: 1200px;
-            margin-top: 50px;
+            margin-top: -100px;
             margin-left: 150px;
             position: relative;
             cursor: default;
@@ -301,7 +330,6 @@
         .box144 {
             display: flex;
             margin-top: 250px;
-
         }
 
         .box15 {
@@ -317,91 +345,173 @@
             font-size: 15px;
             position: relative;
             margin-top: 50px;
-            margin-left: 150px;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: black;
             color: white;
+        }
 
+        .margin-left {
+            transform: translateX(-380px);
+            animation: run 0.5s ease forwards;
+        }
+
+        .margin-right {
+            transform: translateX(784px);
+            animation: run 0.5s ease forwards;
+        }
+
+        @keyframes run {
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .round {
+            animation: flip 0.5s linear forwards;
+        }
+
+        @keyframes flip {
+            0% {
+                transform: rotateY(0);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .tighten:hover {
+            transform: scale(1.009) !important;
+            transition: all 0.3s ease;
+        }
+
+        .huise1 {
+            position: relative;
+            width: 380px;
+            height: 480px;
+            background-color: #EBEBEB;
+            margin-left: 150px;
+            margin-top: 200px;
+        }
+
+
+        .huise3 {
+            position: relative;
+            width: 380px;
+            height: 595px;
+            background-color: #EBEBEB;
+            margin-left: 400px;
+            margin-top: 85px;
+        }
+
+        .huise1:hover {
+            background-color: #d3c8c8;
+        }
+
+        .huise3:hover {
+            background-color: #999;
         }
     </style>
 </head>
 
 <body>
-    <div class="add" style="max-width: 1200px;margin: 0 auto;padding-right: 250px;">
-        <div class="box1">菲姿时尚集团
+    <div class="add" style="max-width: 1200px;margin: 0 auto;padding-right: 250px;overflow: hidden;">
+        <div class="box1"><img src="img/logo.png" alt="" style=" cursor: pointer;">
             <div class="box21">关于集团
-                <div class="box22">集团简介
-                    <div>发展历程</div>
+                <div class="box22">
+                    <div class="nav-item">集团简介</div>
+                    <div class="nav-item">发展历程</div>
                     <div>企业文化</div>
                 </div>
             </div>
             <div class="box31">集团资讯</div>
             <div class="box41">旗下品牌
-                <div class="box42">菲姿FEIZI
+                <div class="box42">
+                    <div class="nav-item">菲姿FEIZI</div>
                     <div>啦娜菲LANFAY</div>
                 </div>
             </div>
             <div class="box51">人才发展
-                <div class="box52">人才政治
+                <div class="box52">
+                    <div class="nav-item">人才政治</div>
                     <div>工作机会</div>
                 </div>
             </div>
-            <div class="box4"> <img src="img/brush2.jpg"></div>
         </div>
+        <div class="box4">
+            <input type="radio" name="bru" id="brush1" checked>
+            <input type="radio" name="bru" id="brush2">
 
+            <div class="buttons">
+                <label for="brush1"></label>
+                <label for="brush2"></label>
+            </div>
 
-
-        <div class="box5"><img src="img/aside-view.jpg">
-            <div class="box6">集团介绍</div>
-            <div class="box7">
-                创立于1992年的菲姿时尚集团是集研发、生产、品牌管理、服务于一体的大型现代化品牌企业。28年来集团始终坚持国际化的品牌经营理念,现已发展成为一家多品牌、集团化运作的知名时尚品牌企业。1999年集团总部落户上海，占地100多亩，坐拥近万平方现代时尚的办公环境。具有深厚品牌文化理念，自主创新研发设计中心、现代化生产基地、仓储物流、高效运营服务体系融合的时尚服装公司。集团目前拥有员工近3000名，菲姿时尚集团实施品牌战略，可持续发展，创新发展之路，不断加大品牌建设力度，为努力实现“集团品牌化，品牌集团化”奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。
+            <div class="sweeper">
+                <a href="">
+                    <img src="img/brush2.jpg" alt="轮播图1" style="width: 100%;height: 100%;">
+                </a>
+                <a href="">
+                    <img src="img/brush1.jpg" alt="轮播图1" style="width: 100%;height: 100%;">
+                </a>
             </div>
-            <div class="boxk1"></div>
-            <div class="boxk2"
-                style="color: rgb(255, 255, 255);display:flex;justify-content: center;align-items: center;">
-                查看更多</div>
-            <div class="box8">
-                <div class="boxb">LANAFAY</div>
-            </div>
-            <div class="box81">
-                <div class="boxb">LANAFAY</div>
-            </div>
-            <img src="img/box-p1.jpg" style="margin-left: 20px;">
-            <img src="img/box-p2.jpg" style="margin-left: 20px;">
         </div>
-
-
-        <div class="box9">
-            <img src="img/house.jpg">
-            <img src="img/runner.jpg" style="margin-left: 20px;">
-            <img src="img/brand.jpg" style="margin-left: 20px;">
-
-        </div>
-
-
-        <div class="box10">
-            <div class="box11">发展历程</div>
-            <div class="box12" style="top: 50px;">
-                菲姿集团秉承文化与时尚升存，庄重与简约并进，得摇服饰文化与生活方式。集团公司坚持品质是根本，服务是关键，厚职薄发快速发展，历经市场的考验，不断治写更加辉煌的篇章.
-                <div class="box13"><a href="" style="position: relative; left: 250px;top: 20px;color: black;">查看更多▶</a>
+        <div class="box5">
+            <img src="img/aside-view.jpg" style="display: block;" class="margin-left">
+            <div class="margin-right" style="position: relative;">
+                <div class="box6">集团介绍</div>
+                <div class="box7" style="margin-top: -225px;">
+                    创立于1992年的菲姿时尚集团是集研发、生产、品牌管理、服务于一体的大型现代化品牌企业。28年来集团始终坚持国际化的品牌经营理念,现已发展成为一家多品牌、集团化运作的知名时尚品牌企业。1999年集团总部落户上海，占地100多亩，坐拥近万平方现代时尚的办公环境。具有深厚品牌文化理念，自主创新研发设计中心、现代化生产基地、仓储物流、高效运营服务体系融合的时尚服装公司。集团目前拥有员工近3000名，菲姿时尚集团实施品牌战略，可持续发展，创新发展之路，不断加大品牌建设力度，为努力实现“集团品牌化，品牌集团化”奋斗，为中国服装产业转型升级和建设时尚品牌强国贡献自己的力量。
+                </div>
+                <div class="boxk1"></div>
+                <div class="boxk2"
+                    style="color: rgb(255, 255, 255);display:flex;justify-content: center;align-items: center;margin-top: -60px;">
+                    查看更多</div>
+                <div class="box8">
+                    <div class="boxb">LANAFAY</div>
+                </div>
+                <div class="box81">
+                    <div class="boxb2">LANAFAY </div>
+                </div>
+                <div style="position: relative;">
+                    <img src="img/box-p1.jpg" style="position: absolute;top: -239px;left: 404px;">
+                    <img src="img/box-p2.jpg" style="position: absolute;top: -239px;left: 806px;">
                 </div>
             </div>
         </div>
-
-
-        <div class="box10" style="margin-left: 554px;">
-            <div class="box11">企业文化</div>
-            <div class="box12" style="top: 50px;">品质 责任 构建追求卓越敢为人先的企业宗旨；合作 尊重营造共属共享共创永续经营</div>
-            <div class="box13"><a href="" style="position: relative;left: 300px;top: 165px;color: black;">查看更多▶</a>
+        <div class="liebiao" style="display: flex;">
+            <div class="huise1 round">
+                <img src="img/house.jpg" alt="" class="tighten">
+                <div style="font-size: 25px; font-weight: bold;margin-left: 20px;margin-top: 10px;">集团简介</div>
+                <div style="margin-top: 20px;margin-left: 20px;">
+                    菲姿集团秉承文化与时尚升存，庄重与简约并进，得摇服饰文化与生活方式。集团公司坚持品质是根本，服务是关键，厚职薄发快速发展，历经市场的考验，不断治写更加辉煌的篇章.
+                    <div class="box13"><a href=""
+                            style="position: relative; left: 250px;top: 20px;color: black;">查看更多▶</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="box10" style="margin-left: 957px;">
-            <div class="box11">集团资讯</div>
-            <div class="box12" style="top: 50px;">菲姿2018年度表彩暨°不忘切心,共雏梦想|20.不忘初心,共筑理想,2019我们都是追梦人"上海菲姿服饰
-                有限公司年度晚会于2019年3月29日在...[2019-04-19]</div>
-            <div class="box13"><a href="" style="position: relative;left: 300px;top: 165px;color: black;">查看更多▶</a>
+            <div class="huise1 round" style="margin-left:25px;">
+                <img src="img/runner.jpg" alt="" class="tighten">
+                <div style="font-size: 25px; font-weight: bold;margin-left: 20px;margin-top: 10px;">企业文化</div>
+                <div style="margin-top: 20px;margin-left: 20px;">
+                    品质 责任 构建追求卓越敢为人先的企业宗旨；合作 尊重营造共属共享共创永续经营
+                    <div class="box13"><a href=""
+                            style="position: relative; left: 250px;top: 70px;color: black;">查看更多▶</a>
+                    </div>
+                </div>
+            </div>
+            <div class="huise3 round" style="margin-left: 25px;">
+                <img src="img/brand.jpg" alt="" class="tighten">
+                <div style="font-size: 25px; font-weight: bold;margin-left: 20px;margin-top: 10px;">集团资讯</div>
+                <div style="margin-top: 20px;;margin-left: 20px;">
+                    菲姿2018年度表彩暨°不忘切心,共雏梦想|20.不忘初心,共筑理想,2019我们都是追梦人"上海菲姿服饰
+                    有限公司年度晚会于2019年3月29日在...[2019-04-19]
+                    <div class="box13"><a href=""
+                            style="position: relative; left: 250px;top: 20px;color: black;">查看更多▶</a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -412,10 +522,12 @@
                 <div class="box13">集团资讯</div>
                 <div class="box13">旗下品牌</div>
                 <div class="box13">人才发展</div>
+
                 <div class="box13" style="left: 220px;">联系我们</div>
             </div>
 
         </div>
+
         <div class="box15" style=" cursor: pointer">
             集团简介 <br>发展历程
             <br>企业文化
@@ -431,9 +543,12 @@
                 <br>总部:上海市松江区九亭镇久富开发区盛龙路1号
             </div>
         </div>
-        <div class="box16">COPYRIGHT@2016 FEIZI GROUP
-            <div style="color: rgb(171, 173, 174);">沪ICP备14042087号-1</div>
-        </div>
+        <span
+            style="width: 1px;height: 100px;vertical-align: top;background-color: #999;display: inline-block;margin-top: -120px;margin-left: 800px;">
+        </span>
+    </div>
+    <div class="box16">COPYRIGHT@2016 FEIZI GROUP
+        <div style="color: rgb(171, 173, 174);">沪ICP备14042087号-1</div>
     </div>
 </body>
 
