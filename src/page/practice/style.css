@@ -1,0 +1,185 @@
+/* reset 重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+li {
+    list-style: none;
+}
+
+
+.container {
+    width: 1200px;
+    /*  */
+    margin: 0 auto;
+}
+
+.container .header {
+    height: 100px;
+}
+
+.container .header .nav {
+    height: 100px;
+    /* background-color: #f60; */
+    float: right;
+}
+
+.container .header .nav ul {
+    line-height: 100px;
+}
+
+.container .header .nav ul li {
+    display: inline-block;
+    line-height: 40px;
+    width: 102px;
+    height: 40px;
+    /* background-color: #EBEBEB; */
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container .header .nav ul li:hover {
+    background-color: #EBEBEB;
+
+}
+
+.container .header .nav ul li .sub-nav {
+    position: absolute;
+    top: 100px;
+    background-color: #EBEBEB;
+    width: 182px;
+    opacity: 0;
+
+    transition: all 0.3s ease;
+}
+
+.container .header .nav ul li:hover .sub-nav {
+    opacity: 1;
+    top: 70px;
+}
+
+.container .header .nav ul li .sub-nav div {
+    width: 142px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ffffff;
+}
+
+.container .header .nav ul li .sub-nav div a {
+    color: #999;
+}
+
+.container .header .nav ul li .sub-nav div a:hover {
+    color: #000;
+}
+
+.container .banner {
+    overflow: hidden;
+    position: relative;
+    /* 行块和行快之间有间隙 */
+    font-size: 0;
+    /* 去除间隙 */
+}
+
+.container .banner .sweeper {
+    width: 2400px;
+    transition: all 0.5s ease;
+}
+
+/* .banner .sweeper a{
+    display: none;
+}
+
+#brush1:checked ~ .sweeper a:nth-child(1),
+#brush2:checked ~ .sweeper a:nth-child(2) {
+    display: block;
+} */
+
+#brush2:checked~.sweeper {
+    transform: translateX(-1200px);
+}
+
+[type="radio"] {
+    display: none;
+}
+
+.buttons{
+    position: absolute;
+    z-index: 99;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+label{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #aaa9a9;
+}
+
+#brush1:checked~.buttons label:nth-child(1),
+#brush2:checked~.buttons label:nth-child(2) {
+    background-color: #fff;
+}
+
+.container .main {
+    margin-top: 56px;
+}
+
+.container .main .main-left{
+    float: left;
+}
+.container .main .main-right{
+    /* float: right; */
+    margin-left: 420px;
+}
+.top{
+        border: 1px solid #db0505;
+        position: relative;
+}
+.title {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 25px;
+    color: #000000;
+}
+.content{
+    font-size: 14px;
+    color: #666;
+    line-height: 28px;
+}
+.more{
+    position: absolute;
+    bottom: 20px;
+    right: 90px;
+}
+.more a{
+    display: inline-block;
+    width: 90px;
+    height: 30px;
+    background-color: #555;
+    font-size: 14px;
+    color: #000000;
+}
+.more a:nth-child(1){
+    position: absolute;
+    right: 0;
+    /* bottom: 20px; */
+}
+.more a:nth-child(2){
+    position: absolute;
+    /* bottom: 20px; */
+    top: 20px;
+}
