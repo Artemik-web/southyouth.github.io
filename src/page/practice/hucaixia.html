@@ -374,35 +374,63 @@
         }
 
         .boxz1 {
-           width: 400px;
-            height: 600px;
-            background-color: aliceblue;
+            width: 400px;
+            height: 500px;
+            background-color: #EBEBEB;
+            margin-top: 80px;
+            flex: 1;
+            position: relative;
+        }
+
+        .boxz1 a {
+            text-decoration: underline;
+            display: block;
+            margin-top: 14px;
+            margin-left: 300px;
+            
+        }
+
+        .boxz1 img {
+
+            transform: translateX(-500px)rotateY(-180deg);
+         
+            animation: ZX 0.5s ease forwards;
+        }
+
+        @keyframes ZX {
+            100% {
+                transform: translateX(0);
+                transform: rotateY(0deg);
+            }
+        }
+
+        .boxz1:hover img {
+            transform: scale(1.5);
+            transition: transform 2s ease;
+            opacity: 0.9;
+        }
+
+        .boxz2 {
+            width: 400px;
+            height: 500px;
+            background-color: #EBEBEB;
             margin-top: 80px;
             flex: 1;
         }
 
-        .boxz1 img {
-           
-  transition: transform 2s ease;
-        }
-        
-            
-    
-         .boxz1:hover img {
-            transform: scale(1.03);
-            opacity: 0.9;
-            z-index: 10;
-        } 
-        .boxz2 {
-            width: 400px;
-            height: 600px;
-            background-color: aliceblue;
-            margin-top: 80px;
-            flex: 1;
+        .boxz2 a {
+            display: block;
+            margin-left: 300px;
+            text-decoration: underline;
+            margin-top: 140px;
         }
 
         .boxz2 img {
             transition: transform 2s ease;
+
+            transform: translateX(-500px)rotateY(-180deg);
+            ;
+            animation: ZX 0.5s ease forwards;
         }
 
         .boxz2:hover img {
@@ -412,19 +440,31 @@
 
         .boxz3 {
             width: 400px;
-            height: 650px;
-            background-color: aliceblue;
+            height: 550px;
+            background-color: #EBEBEB;
             flex: 1;
             margin-top: 30px;
         }
 
         .boxz3 img {
             transition: transform 2s ease;
+
+            transform: translateX(-500px)rotateY(-180deg);
+            ;
+            animation: ZX 0.5s ease forwards;
         }
 
         .boxz3:hover img {
             transform: scale(1.03);
             opacity: 0.9;
+        }
+
+        .boxz3 a {
+            text-decoration: underline;
+            display: block;
+            margin-top: 50px;
+            margin-left: 300px;
+
         }
 
         .boxs {
@@ -591,7 +631,7 @@
             </div>
         </div>
         <div class="boxz">
-            <div class="boxz1"><a href=""><img src="./img/house.jpg" alt=""></a>
+            <div class="boxz1"><img src="./img/house.jpg" alt="">
 
                 <h3>发展历程</h3>
                 <h3>
@@ -600,22 +640,19 @@
                     饰文化与生活方式。集团公司坚持品质是根本，服务是关键，原积薄发快速发展，历经市场的考验，不断谱写更加辉煌的篇章。</h3>
                 <br>
                 <br>
-                <div> <a style="margin-left: 300px;" href="">查看更多►</a></div>
+                <div> <a href="">查看更多►</a></div>
             </div>
             <div class="boxz2">
                 <img src="./img/runner.jpg" alt="">
                 <h3>企业文化</h3>
                 <h3>品质 责任 构建追求卓越敢为人先的企业终旨;合作 尊重营造共赢共享共创的永续经营</h3>
-                <br>
-                <br>
-                <br><br>
-                <div><a style="margin-left: 300px;" href="">查看更多►</a></div>
+                <div><a href="">查看更多►</a></div>
             </div>
             <div class="boxz3">
                 <img src="./img/brand.jpg" alt="">
-                <h3>菲姿2018年度表彰暨"不忘初心，共筑梦想|20."忘初心，共筑梦想，2019我们都是追梦人"上海菲姿有限公司年度晚会于2019年3月29日在［2019]
+                <h3>菲姿2018年度表彰暨"不忘初心，共筑梦想|20."忘初心，共筑梦想，2019我们都是追梦人"上海菲姿有限公司年度晚会于2019年3月29日在［2019-04-19]
                 </h3>
-                <div> <a style="margin-left: 300px;" href="">查看更多►</a></div>
+                <div> <a href="">查看更多►</a></div>
             </div>
         </div>
         <div>
