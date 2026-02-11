@@ -19,6 +19,7 @@ li {
     width: 1200px;
     /*  */
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .container .header {
@@ -110,7 +111,7 @@ li {
     display: none;
 }
 
-.buttons{
+.buttons {
     position: absolute;
     z-index: 99;
     bottom: 20px;
@@ -118,7 +119,7 @@ li {
     transform: translateX(-50%);
 }
 
-label{
+label {
     display: inline-block;
     width: 12px;
     height: 12px;
@@ -136,50 +137,157 @@ label{
     margin-top: 56px;
 }
 
-.container .main .main-left{
+.container .main .main-left {
     float: left;
 }
-.container .main .main-right{
+
+.container .main .main-right {
     /* float: right; */
-    margin-left: 420px;
+    margin-left: 416px;
 }
-.top{
-        border: 1px solid #db0505;
-        position: relative;
+
+.top {
+    position: relative;
 }
+
 .title {
     display: block;
     font-size: 20px;
     font-weight: bold;
-    margin-top: 40px;
+    padding-top: 40px;
     margin-bottom: 25px;
     color: #000000;
 }
-.content{
+
+.content {
     font-size: 14px;
     color: #666;
     line-height: 28px;
 }
-.more{
+
+.more {
     position: absolute;
-    bottom: 20px;
+    bottom: 0;
     right: 90px;
 }
-.more a{
+
+.more a {
+    text-align: center;
     display: inline-block;
     width: 90px;
+    line-height: 30px;
     height: 30px;
     background-color: #555;
     font-size: 14px;
     color: #000000;
 }
-.more a:nth-child(1){
+
+.more a:hover {
+    background-color: #777;
+}
+
+.more a:nth-child(1) {
     position: absolute;
     right: 0;
     /* bottom: 20px; */
 }
-.more a:nth-child(2){
+
+.more a:nth-child(2) {
     position: absolute;
     /* bottom: 20px; */
     top: 20px;
+    font-size: 12px;
+    color: #fff;
 }
+
+.bottom {
+    margin-top: 90px;
+    font-size: 0;
+}
+
+.bottom a {
+    display: inline-block;
+    position: relative;
+}
+
+.bottom a:nth-child(2) {
+    margin-left: 22px;
+}
+
+.bottom a span {
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    width: 140px;
+    height: 42px;
+    line-height: 42px;
+    border: 3px solid #fff;
+    color: #fff;
+    position: absolute;
+    /* 上下左右同时居中 */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    transform: scale(2);
+    transition: transform 0.3s ease , opacity 0.3s ease;
+    opacity: 0;
+}
+
+.bottom a:hover span {
+    opacity: 1;
+    transform: scale(1);
+
+
+    /* transform: scale(0.9) translate(-50%, -50%); */
+    /* transform: translate(-50%, -50%); */
+}
+
+.bottom  a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 380px;
+    height: 240px;
+    background: rgb(0, 0, 0, 0.4);
+    opacity: 0;
+    z-index: 99;
+    transition: opacity 0.3s ease;
+}
+.bottom  a:hover::after{
+    opacity: 1;
+}
+
+
+.main-left{
+    transform: translateX(-380px);
+    animation: run 0.5s ease forwards;
+}
+.main-right{
+    transform: translateX(784px);
+    animation: run 0.5s ease forwards;
+}
+
+@keyframes run {
+    
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
+.list{
+    text-align: left;
+    /* display: flex; */
+ 
+ 
+    /* justify-content: space-between; */
+}
+
+
+.list div p:hover{
+    transform: rotateY(70deg);
+    transition: all 0.3s ease;
+}
+
