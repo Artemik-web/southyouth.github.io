@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // 快速学习javascript的核心内容
+
+    // 1、变量与数据类型：let, const, 字符串, 数字, 布尔值, null, undefined。 
+
+    // 2、函数：普通函数, 箭头函数 (非常重要), 参数传递。 
+
+    // 3、对象与数组： 对象创建、属性访问 (obj.key)。
+
+    let arr = [1, '2', null, 4, 5];
+    console.log(arr[0]);
+    //1
+    let arr1 = arr[0];
+
+    if (arr[0] == 1) {
+        console.log("第一个元素是1");
+    } else if (arr[0] !== 1) {
+        //多个判断 else if
+        console.log("第一个元素不是1");
+    } else {
+        console.log("第一个元素是1");
+    }
+
+    //循环
+    // let arr =[1,'2',null,4,5];
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+
+
+    for (let i in arr) {
+        console.log(arr[i]);
+    }
+
+
+    let obj = {
+        name: '张三',
+        age: 20,
+        city: '北京',
+        arr: [1, 2, 3, 4, 5],
+        sayHello: function () {
+            console.log('Hello, my name is ' + this.name);
+        }
+    }
+    //对象没有长度，所以不能用length属性来获取数组的长度
+    console.log(obj.length); //undefined
+    //链式调用
+    console.log(obj.arr.length); //5
+    console.log(obj.name, obj.age, obj.city); //张三 20 北京
+
+    for (let key in obj) {
+        console.log(obj[key]);
+    }
+
+    // object array function
+    //原型链
+    // 最原始的对象  new Object()
+    let obj1 = {
+        name: '张三',
+        age: 20,
+    }
+    let obj2 = new Object(); //{}
+    console.log(new Object())
+    console.log(obj1.__proto__ === obj2.__proto__) //true
+    //原型链：对象通过__proto__属性指向它的原型对象;
+
+    //Person相当于Object
+    class Person {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        sayHello() {
+            console.log('Hello, my name is ' + this.name);
+        }
+    }
+
+    let p1 = new Person('张三', 20);
+    p1.sayHello(); //Hello, my name is 张三
+
+
+    // y = x  + 1
+    //函数 / 方法
+    function a(a, b, c, ...args) {
+        console.log(a, b, c, args);
+    }
+    a(1, 'a', true, 4, 5, 6); //1 'a' true [4, 5, 6]
+
+    function q(x, y) {
+        console.log(x + y);
+        return x + y;
+    }
+    let result = q(1, 2); //3
+
+    //箭头函数
+    let aaa = (x, y) => {
+        console.log(x + y);
+        return x + y;
+    }
+
+    aaa(1, 2); //3
+
+
+
+
+
+
+    // 数组常用方法：map, filter, forEach, find, push, splice。 解构赋值 (const { name } = obj) 
+    let arr5 = [1, 2, 3, 4, 5];
+    // map: 对数组的每个元素进行操作，返回一个新数组
+    arr5.map(item => item * 2); //[2, 4, 6, 8, 10]
+    // filter: 对数组的每个元素进行判断，返回一个新数组
+    arr5.filter(item => item % 2 === 0); //[2, 4]
+    // forEach: 对数组的每个元素进行操作，没有返回值
+    arr5.forEach(item => console.log(item)); //1 2 3 4
+    // find: 对数组的每个元素进行判断，返回第一个满足条件的元素
+    arr5.find(item => item > 3); //4
+    // push: 向数组末尾添加一个或多个元素，返回新数组的长度
+    arr5.push(6, 7); //[1, 2, 3, 4, 5, 6, 7]
+    // splice: 向数组中添加或删除元素，返回被删除的元素
+    arr5.splice(2, 1); //[3]  [2, 3)
+    console.log(arr5); //[1, 2, 4, 5, 6, 7]
+
+    //解构赋值
+    let obj6 = {
+        name: '张三',
+        age: 20,
+        city: '北京',
+        arr: [1, 2, 3, 4, 5],
+    }
+    let { name, age, ...args } = obj6;
+    // 第一步 声明变量 name 和 age
+    // 第二步 从 obj6 中提取 name 和 age 的值，分别赋值给变量 name 和 age
+    console.log(name, age, args); //张三 20
+
+    // let arr6 = ;
+    let [a, b, ...rest] = [1, 2, 3, 4, 5];
+    console.log(a, b, rest); //1 2 [3, 4,5]
+
+    // 4、ES6+ 核心： 模板字符串 ( Hello $ {name} )。 模块导入导出
+    //模板字符串 ( Hello $ {name} )。 模块导入导出
+    let string = `Hello ${obj.name}`;
+    // `gshda${变量}`差不多等于字符串的''/""
+
+
+    // (import / export)。 展开运算符 (...args)。
+    // 5、异步基础：知道什么是 Promise，会用 async/await 写接口请求
+</script>
