@@ -15,14 +15,21 @@
 <script>
     // 快速学习javascript的核心内容
 
-    // 1、变量与数据类型：let, const, 字符串, 数字, 布尔值, null, undefined。 
-
+    // 1、变量与数据类型：let, const, 字符串, 数字, 布尔值, null, undefined, 数组,对象。 
+     // var声明的变量可以重复声明，且有变量提升（不推荐使用）
+    let aa = 2; // let声明的变量不能重复声明，没有变量提升
+    const c = 3; // const声明的变量必须初始化，且不能修改（常量）
+    function fn() { // 函数声明
+        let a = 2;// 函数内部声明的变量，只在函数内部有效
+    }
     // 2、函数：普通函数, 箭头函数 (非常重要), 参数传递。 
 
     // 3、对象与数组： 对象创建、属性访问 (obj.key)。
-
-    let arr = [1, '2', null, 4, 5];
-    console.log(arr[0]);
+    // 长度：arr.length;
+    //脚标/indexx：0开始
+    // length-1是最后一个元素的索引
+    let arr = [1, '2', null, 4, 5,undefined, { name: '张三' }, [1, 2, 3]];
+    console.log(arr[0],arr[7][0]);
     //1
     let arr1 = arr[0];
 
@@ -46,7 +53,7 @@
         console.log(arr[i]);
     }
 
-
+// 键值对 let obj = { }
     let obj = {
         name: '张三',
         age: 20,
@@ -89,12 +96,23 @@
         }
     }
 
-    let p1 = new Person('张三', 20);
+    let p1 = new Person('张三', 20);//{}
     p1.sayHello(); //Hello, my name is 张三
 
 
-    // y = x  + 1
+    // y = x  + 1 
     //函数 / 方法
+    function add(x) {
+       console.log(x + 1);
+       return x + 1;
+    }
+    let sss =  add(6)
+    function aaaa(x, q) {
+        console.log(x + q);
+        return x + q;
+    }
+    let asa = aaaa(1, 2);
+
     function a(a, b, c, ...args) {
         console.log(a, b, c, args);
     }
@@ -106,7 +124,7 @@
     }
     let result = q(1, 2); //3
 
-    //箭头函数
+    //箭头函数 () => {}
     let aaa = (x, y) => {
         console.log(x + y);
         return x + y;
@@ -148,172 +166,231 @@
     console.log(name, age, args); //张三 20
 
     // let arr6 = ;
-    let [a, b, ...rest] = [1, 2, 3, 4, 5];
-    console.log(a, b, rest); //1 2 [3, 4,5]
+    // let [a, b, ...rest] = [1, 2, 3, 4, 5];
+    // console.log(a, b, rest); //1 2 [3, 4,5]
 
     // 4、ES6+ 核心： 模板字符串 ( Hello $ {name} )。 模块导入导出
     //模板字符串 ( Hello $ {name} )。 模块导入导出
     let string = `Hello ${obj.name}`;
     // `gshda${变量}`差不多等于字符串的''/""
 
+// 名字、年龄、城市、职位,1000
+//args = [ 20, '北京', '工程师',1000]
+    let qwer = (a, ...args) => {
+        console.log(a, args);
+        return `名字：${a}，年龄：${args[0]}，城市：${args[1]}，职位：${args[2]}，薪水：${args[3]}`;
+    }; 
+    let res =  qwer('张三',20, '北京', '工程师',1000);
+    console.log(res); //名字：张三，年龄：20，城市：北京，职位：工程师，薪水：1000
+    //异步
+    //计时器
+    // setTimeout(() => {
+    //     console.log('3秒后执行');
+    // }, 3000);
+    // console.log('立即执行');
+    
+    //语法糖
+    // async/await 作于promise对象 用于封装异步操作，让异步代码看起来像同步代码一样清晰易懂
+    // Promise: 解决回调地狱的问题，让异步代码更清晰
+    //接口请求：fetch/axios + async/await
+    let time = async () => {
+        console.log('立即执行');
+        //异步任务 await后面必须是一个promise对象，setTimeout不是promise对象，所以需要手动封装成promise
+        await  setTimeout(() => {
+                console.log('3秒后执行');
+            }, 3000);
+        console.log('执行完成')
+    }
+    
+    time();
+    console.log('执行');
+    //promise对象：表示一个异步操作的最终完成（或失败）及其结果值的表示。Promise有三种状态：pending（进行中）、fulfilled（已完成）、rejected（已拒绝）。Promise可以链式调用，避免回调地狱。
+    let promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('3秒后执行');
+        }, 3000);
+    });
+    //接口请求返回的数据也是一个promise对象，可以用.then()方法来处理结果
+    //promise.then().catch()方法来处理结果和错误
+    promise.then(res =>{
+        console.log(res); //3秒后执行
+    }).catch(err =>{
+        console.log(err);
+    });
 
-    // (import / export)。 展开运算符 (...args)。
-    // 5、接口请求相关（async/await）
-    // ====== 什么时候需要用？ ======
-    // 页面加载时获取用户信息、搜索功能、提交表单、点击按钮刷新数据...
-    // 简单说：只要和"服务器"交互，都需要用到这里讲的接口请求
-    
-    // 浏览器提供fetch函数来发送网络请求，配合async/await语法最常用
-    
-    // 基础写法：async声明这是一个异步函数，await等待请求结果
-    async function getData() {
-        // await会暂停代码执行，等fetch完成后再继续往下走
-        // 这让异步代码看起来像同步代码一样直观
-        let result = await fetch('/api/user');
-        // 返回的是响应对象，需要调用.json()转换成真正的数据
-        let data = await result.json();
-        console.log(data);
-    }
-    
-    // 实际开发中网络可能失败（比如服务器挂了、断网了），需要捕获错误
-    // try/catch: 尝试执行try里的代码，如果出错就跳到catch里处理
-    async function getDataSafe() {
-        try {
-            // 正常情况
-            let result = await fetch('/api/user');
-            let data = await result.json();
-            console.log(data);
-        } catch (error) {
-            // 网络错误、服务器返回404等都会跳到这里
-            console.log('请求失败:', error);
+    //fetch()方法
+    // 常用请求方式：get、post、put、delete
+    fetch('https://www.personalblog.cn/nan/my/article/api/getBycate?category_id=1&page=1',{
+        method:'get',
+        headers:{
+            'Content-Type':'application/json'
         }
-    }
-    
-    // 进阶：并行请求（同时发多个请求）
-    // 如果你有两个接口互相独立，可以同时发，节省等待时间
-    // 串行：先等user完成，再等list完成 = 1秒+1秒=2秒
-    // 并行：同时发两个请求 = 约1秒（取最慢的那个）
-    async function getMultipleData() {
-        // Promise.all会等两个请求都完成后再继续
-        let [userRes, listRes] = await Promise.all([
-            fetch('/api/user'),
-            fetch('/api/list')
-        ]);
-        // 分别转换数据
-        let user = await userRes.json();
-        let list = await listRes.json();
-    }
-    
-    // ====== fetch的细节 ======
-    // 1、fetch默认是GET请求，如果是POST需要加参数：
-    // fetch('/api/add', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({ name: '张三' })
-    // })
-    
-    // 2、response.ok只能判断200-299，其他状态码不会报错
-    // 需要手动判断：if (!result.ok) throw new Error('请求失败')
-    
-    // 3、实际项目很少直接用fetch，而是用更方便的axios库
-    
-    // 6、模块导入导出：把代码拆分到不同文件里
-    // ====== 为什么需要模块化？ ======
-    // 一个项目几百个函数全写在一个文件里会疯掉
-    // 所以把相关功能拆分成独立文件，用import/export来组合
-    
-    // 导出（在一个文件里）
-    // export const name = '张三'
-    // export function sayHello() {}
-    // export default { name, sayHello }
-    
-    // 导入（另一个文件里）
-    // import { name, sayHello } from './utils'     // 解构导入（精确导入）
-    // import utils from './utils'                  // 默认导入（导入整个对象）
-    // import './styles.css'                        // 导入CSS（只执行，不获取内容）
-    
-    // ====== 包的引用（npm/yarn） ======
-    // 别人写好的代码发布到npm仓库，可以用npm install来安装
-    // 比如：npm install axios
-    // 安装后就可以 import axios from 'axios' 来使用
-    
-    // 接下来会讲：axios的用法（比fetch更方便）
+    })
+        .then(response => response.json()) //把响应对象转换成json数据
+        .then(data => {
+            console.log(data); //处理数据
+        })
+        .catch(error => {
+            console.log('请求失败:', error); //处理错误
+        });
 
-    // 7、axios：更方便的HTTP请求库
-    // ====== 为什么用axios而不是fetch？ ======
-    // - 自动转换JSON，不用每次调.json()
-    // - HTTP状态码错误（如404、500）会自动进入catch
-    // - 可以设置全局拦截器（请求前/响应后统一处理）
-    // - 支持取消请求、请求进度等高级功能
-    // - API设计更友好
+    // // (import / export)。 展开运算符 (...args)。
+    // // 5、接口请求相关（async/await）
+    // // ====== 什么时候需要用？ ======
+    // // 页面加载时获取用户信息、搜索功能、提交表单、点击按钮刷新数据...
+    // // 简单说：只要和"服务器"交互，都需要用到这里讲的接口请求
     
-    // 使用前需要先安装：npm install axios
-    // import axios from 'axios'
+    // // 浏览器提供fetch函数来发送网络请求，配合async/await语法最常用
     
-    // 基础GET请求
-    async function getUser() {
-        // axios会自动把data包装在response.data里
-        let res = await axios.get('/api/user');
-        console.log(res.data); // 直接就是数据，不用再调.json()
-    }
+    // // 基础写法：async声明这是一个异步函数，await等待请求结果
+    // async function getData() {
+    //     // await会暂停代码执行，等fetch完成后再继续往下走
+    //     // 这让异步代码看起来像同步代码一样直观
+    //     let result = await fetch('/api/user');
+    //     // 返回的是响应对象，需要调用.json()转换成真正的数据
+    //     let data = await result.json();
+    //     console.log(data);
+    // }
     
-    // 带参数：query参数用params
-    async function search(keyword) {
-        let res = await axios.get('/api/search', {
-            params: { keyword: keyword, page: 1 }
-        });
-        console.log(res.data);
-    }
+    // // 实际开发中网络可能失败（比如服务器挂了、断网了），需要捕获错误
+    // // try/catch: 尝试执行try里的代码，如果出错就跳到catch里处理
+    // async function getDataSafe() {
+    //     try {
+    //         // 正常情况
+    //         let result = await fetch('/api/user');
+    //         let data = await result.json();
+    //         console.log(data);
+    //     } catch (error) {
+    //         // 网络错误、服务器返回404等都会跳到这里
+    //         console.log('请求失败:', error);
+    //     }
+    // }
     
-    // POST请求（提交表单/JSON）
-    async function login(username, password) {
-        // axios自动设置Content-Type为application/json
-        // 自动把对象转成JSON字符串
-        let res = await axios.post('/api/login', {
-            username: username,
-            password: password
-        });
-        console.log(res.data);
-    }
+    // // 进阶：并行请求（同时发多个请求）
+    // // 如果你有两个接口互相独立，可以同时发，节省等待时间
+    // // 串行：先等user完成，再等list完成 = 1秒+1秒=2秒
+    // // 并行：同时发两个请求 = 约1秒（取最慢的那个）
+    // async function getMultipleData() {
+    //     // Promise.all会等两个请求都完成后再继续
+    //     let [userRes, listRes] = await Promise.all([
+    //         fetch('/api/user'),
+    //         fetch('/api/list')
+    //     ]);
+    //     // 分别转换数据
+    //     let user = await userRes.json();
+    //     let list = await listRes.json();
+    // }
     
-    // PUT（更新）、DELETE（删除）同理
-    async function updateUser(id, data) {
-        await axios.put(`/api/user/${id}`, data);
-    }
-    async function deleteUser(id) {
-        await axios.delete(`/api/user/${id}`);
-    }
+    // // ====== fetch的细节 ======
+    // // 1、fetch默认是GET请求，如果是POST需要加参数：
+    // // fetch('/api/add', {
+    // //     method: 'POST',
+    // //     headers: { 'Content-Type': 'application/json' },
+    // //     body: JSON.stringify({ name: '张三' })
+    // // })
     
-    // 错误处理：axios会自动把HTTP错误转为reject
-    async function getDataSafe() {
-        try {
-            let res = await axios.get('/api/user');
-            console.log(res.data);
-        } catch (error) {
-            // axios的错误对象包含更多信息
-            if (error.response) {
-                // 服务器返回了错误状态码（4xx、5xx）
-                console.log('请求失败:', error.response.status);
-                console.log('错误信息:', error.response.data);
-            } else if (error.request) {
-                // 请求发出去了但没收到响应（网络问题）
-                console.log('网络错误:', error.message);
-            } else {
-                // 请求配置出错
-                console.log('请求错误:', error.message);
-            }
-        }
-    }
+    // // 2、response.ok只能判断200-299，其他状态码不会报错
+    // // 需要手动判断：if (!result.ok) throw new Error('请求失败')
     
-    // 并行请求
-    async function getMultiData() {
-        let [userRes, listRes] = await Promise.all([
-            axios.get('/api/user'),
-            axios.get('/api/list')
-        ]);
-        // axios的响应数据直接在res.data里
-        console.log(userRes.data, listRes.data);
-    }
+    // // 3、实际项目很少直接用fetch，而是用更方便的axios库
+    
+    // // 6、模块导入导出：把代码拆分到不同文件里
+    // // ====== 为什么需要模块化？ ======
+    // // 一个项目几百个函数全写在一个文件里会疯掉
+    // // 所以把相关功能拆分成独立文件，用import/export来组合
+    
+    // // 导出（在一个文件里）
+    // // export const name = '张三'
+    // // export function sayHello() {}
+    // // export default { name, sayHello }
+    
+    // // 导入（另一个文件里）
+    // // import { name, sayHello } from './utils'     // 解构导入（精确导入）
+    // // import utils from './utils'                  // 默认导入（导入整个对象）
+    // // import './styles.css'                        // 导入CSS（只执行，不获取内容）
+    
+    // // ====== 包的引用（npm/yarn） ======
+    // // 别人写好的代码发布到npm仓库，可以用npm install来安装
+    // // 比如：npm install axios
+    // // 安装后就可以 import axios from 'axios' 来使用
+    
+    // // 接下来会讲：axios的用法（比fetch更方便）
+
+    // // 7、axios：更方便的HTTP请求库
+    // // ====== 为什么用axios而不是fetch？ ======
+    // // - 自动转换JSON，不用每次调.json()
+    // // - HTTP状态码错误（如404、500）会自动进入catch
+    // // - 可以设置全局拦截器（请求前/响应后统一处理）
+    // // - 支持取消请求、请求进度等高级功能
+    // // - API设计更友好
+    
+    // // 使用前需要先安装：npm install axios
+    // // import axios from 'axios'
+    
+    // // 基础GET请求
+    // async function getUser() {
+    //     // axios会自动把data包装在response.data里
+    //     let res = await axios.get('/api/user');
+    //     console.log(res.data); // 直接就是数据，不用再调.json()
+    // }
+    
+    // // 带参数：query参数用params
+    // async function search(keyword) {
+    //     let res = await axios.get('/api/search', {
+    //         params: { keyword: keyword, page: 1 }
+    //     });
+    //     console.log(res.data);
+    // }
+    
+    // // POST请求（提交表单/JSON）
+    // async function login(username, password) {
+    //     // axios自动设置Content-Type为application/json
+    //     // 自动把对象转成JSON字符串
+    //     let res = await axios.post('/api/login', {
+    //         username: username,
+    //         password: password
+    //     });
+    //     console.log(res.data);
+    // }
+    
+    // // PUT（更新）、DELETE（删除）同理
+    // async function updateUser(id, data) {
+    //     await axios.put(`/api/user/${id}`, data);
+    // }
+    // async function deleteUser(id) {
+    //     await axios.delete(`/api/user/${id}`);
+    // }
+    
+    // // 错误处理：axios会自动把HTTP错误转为reject
+    // async function getDataSafe() {
+    //     try {
+    //         let res = await axios.get('/api/user');
+    //         console.log(res.data);
+    //     } catch (error) {
+    //         // axios的错误对象包含更多信息
+    //         if (error.response) {
+    //             // 服务器返回了错误状态码（4xx、5xx）
+    //             console.log('请求失败:', error.response.status);
+    //             console.log('错误信息:', error.response.data);
+    //         } else if (error.request) {
+    //             // 请求发出去了但没收到响应（网络问题）
+    //             console.log('网络错误:', error.message);
+    //         } else {
+    //             // 请求配置出错
+    //             console.log('请求错误:', error.message);
+    //         }
+    //     }
+    // }
+    
+    // // 并行请求
+    // async function getMultiData() {
+    //     let [userRes, listRes] = await Promise.all([
+    //         axios.get('/api/user'),
+    //         axios.get('/api/list')
+    //     ]);
+    //     // axios的响应数据直接在res.data里
+    //     console.log(userRes.data, listRes.data);
+    // }
     
     // ====== axios的常见配置 ======
     // 全局配置（通常在项目入口文件设置一次）
