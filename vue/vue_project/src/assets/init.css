@@ -1,0 +1,52 @@
+/* 清除所有元素的内外边距 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置默认字体和颜色 */
+body,
+html {
+    font-family: "微软雅黑", Arial;
+    color: #333;
+}
+
+/* 设置链接的默认样式 */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* 清除列表元素的样式 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 设置图片的默认样式 */
+img {
+    border: none;
+    vertical-align: top;
+}
+
+/* 清除浮动 */
+clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+
+.el-header {
+    background-color: #72a2e0;
+}
+
+.el-aside {
+    background-color: #500b39;
+}
+
+.el-main {
+    background-color: #1f67ba;
+}

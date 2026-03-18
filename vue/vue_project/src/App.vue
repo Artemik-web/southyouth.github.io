@@ -4,70 +4,83 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
 
-  <RouterView />
-  
+  <div class="common-layout">
+    <el-container style="height: 100vh">
+      <el-aside width="200px">
+        <h5 class="mb-2">Default colors</h5>
+        <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
+          <el-sub-menu index="1">
+            <template #title>
+              <el-icon>
+                <location />
+              </el-icon>
+              <span>Navigator One</span>
+            </template>
+            <el-menu-item-group title="Group One">
+              <el-menu-item index="1-1">item one</el-menu-item>
+              <el-menu-item index="1-2">item two</el-menu-item>
+            </el-menu-item-group>
+            <el-menu-item-group title="Group Two">
+              <el-menu-item index="1-3">item three</el-menu-item>
+            </el-menu-item-group>
+            <el-sub-menu index="1-4">
+              <template #title>item four</template>
+              <el-menu-item index="1-4-1">item one</el-menu-item>
+            </el-sub-menu>
+          </el-sub-menu>
+          <el-menu-item index="2">
+            <el-icon><icon-menu /></el-icon>
+            <span>Navigator Two</span>
+          </el-menu-item>
+          <el-menu-item index="3" disabled>
+            <el-icon>
+              <document />
+            </el-icon>
+            <span>Navigator Three</span>
+          </el-menu-item>
+          <el-menu-item index="4">
+            <el-icon>
+              <setting />
+            </el-icon>
+            <span>Navigator Four</span>
+          </el-menu-item>
+        </el-menu>
+      </el-aside>
+      <el-container class="mini">
+        <el-header>Header</el-header>
+        <el-main>
+          <!-- 页面显示区 -->
+          <RouterView />
+        </el-main>
+      </el-container>
+    </el-container>
+  </div>
+
+
+
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+/* 引入初始化样式 */
+
+.el-header {
+  background-color: #72a2e0;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; */
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.mini {
+  /* padding: 60px 0 0 0; */
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.el-aside {
+  background-color: #f2c3e3;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.el-main {
+  background-color: #d3dce6;
 }
 </style>
