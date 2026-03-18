@@ -1,6 +1,6 @@
 <script setup>
 
-import { ref,reactive } from 'vue'
+import { ref, reactive } from 'vue'
 
 // let obj1 = reactive({
 //     name: '张三',
@@ -44,9 +44,10 @@ let add = () => {
         {{ nll }}
         {{ undef }}
         <!-- @click点击事件 -->
-        <el-button  :a="count" type="primary" @click="add()">Primary</el-button>
+        1111
+        <el-button :a="count" type="primary" @click="add()">Primary</el-button>
         <img :src="data.avatar" alt="">
-   </div>
+    </div>
 </template>
 
 <style scoped></style>
