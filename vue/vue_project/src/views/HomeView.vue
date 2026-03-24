@@ -30,11 +30,19 @@ let add = () => {
 }
 
 
+// 键盘按下事件
+const keyDown = (qqq) => {
+    if (qqq.keyCode === 32) {
+        console.log("按下了空格键");
+    } else {
+        console.log("按下了其他键");
+    }
+}
 
 </script>
 
 <template>
-    <div>
+    <div :aa="aaa">
         {{ count }}
         {{ str }}
         {{ obj }}
@@ -58,6 +66,15 @@ let add = () => {
         <div v-for="value in [1, 2, 3, 4, 5]" :key="value">
             {{ value }}
         </div>
+
+        <div v-for="(value, index) in [1, 2, 3, 4, 5]" :key="index">
+            {{ value }}
+        </div>
+        <!-- v-on 绑定事件 -->
+        <div @click="add">Click me</div>
+        <input  @keydown="keyDown($event)"></input>
+        <!-- v-model 双向绑定 -->
+        <input type="text" v-model="str">
 
     </div>
 </template>
