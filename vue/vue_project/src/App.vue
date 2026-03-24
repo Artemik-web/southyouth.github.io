@@ -14,11 +14,12 @@ import { RouterLink, RouterView } from 'vue-router'
               <el-icon>
                 <location />
               </el-icon>
-              <span>Navigator One</span>
+              <span>用户管理</span>
             </template>
             <el-menu-item-group title="Group One">
               <el-menu-item index="1-1">item one</el-menu-item>
               <el-menu-item index="1-2">item two</el-menu-item>
+              <el-menu-item index="1-3">item tree</el-menu-item>
             </el-menu-item-group>
             <el-menu-item-group title="Group Two">
               <el-menu-item index="1-3">item three</el-menu-item>
@@ -28,21 +29,22 @@ import { RouterLink, RouterView } from 'vue-router'
               <el-menu-item index="1-4-1">item one</el-menu-item>
             </el-sub-menu>
           </el-sub-menu>
-          <el-menu-item index="2">
+          <el-menu-item index="2" @click="$router.push('/about')">
             <el-icon><icon-menu /></el-icon>
-            <span>Navigator Two</span>
+            <span>关于</span>
           </el-menu-item>
           <el-menu-item index="3" disabled>
             <el-icon>
               <document />
             </el-icon>
-            <span>Navigator Three</span>
+            <span>文章管理</span>
           </el-menu-item>
-          <el-menu-item index="4">
+          <!-- ['/setting'] -->
+          <el-menu-item index="4" @click="$router.push('/setting')">
             <el-icon>
               <setting />
             </el-icon>
-            <span>Navigator Four</span>
+            <span>系统设置</span>
           </el-menu-item>
         </el-menu>
       </el-aside>

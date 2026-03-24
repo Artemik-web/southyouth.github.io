@@ -47,6 +47,18 @@ let add = () => {
         1111
         <el-button :a="count" type="primary" @click="add()">Primary</el-button>
         <img :src="data.avatar" alt="">
+        <div>
+            <div v-if="false">钱钱钱钱钱钱</div>
+            <!-- <div v-else>没有钱钱钱钱钱钱</div> -->
+        </div>
+        <div>
+            <div v-show="false">121111111111</div>
+        </div>
+
+        <div v-for="value in [1, 2, 3, 4, 5]" :key="value">
+            {{ value }}
+        </div>
+
     </div>
 </template>
 
